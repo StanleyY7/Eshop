@@ -2,9 +2,9 @@
 
 ## Design
 
-Below design/wireframe is what I will aim to create for the project. I made the design/wireframe using canva.
+Below are 3 different designs/wireframes I created (using canva) for the project, ultimately I went with:
 
-![updated design](https://user-images.githubusercontent.com/119549394/214205083-1d7d0175-e506-47fc-a171-2cc018f916b7.png)
+![Untitled design (13)](https://user-images.githubusercontent.com/119549394/215723162-8fb69dd3-7967-4bf8-944e-067ea26578be.png)
 
 ## Outline
 
