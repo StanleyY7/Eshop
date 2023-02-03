@@ -1,0 +1,25 @@
+.productGrid__container {
+  height: 75vh;
+  width: 98.35vw;
+  background-color: white;
+  padding: 0.5rem;
+  text-align: center;
+  color: black;
+  font-size: 1.4rem;
+}
+
+.productGrid__title {
+  padding: 0.5rem 0rem;
+  padding-bottom: 0.5rem;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=productGrid.css.map */

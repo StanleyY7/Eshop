@@ -1,0 +1,14 @@
+.navbar {
+  padding-right: 0.5rem;
+  font-size: 1.4rem;
+  overflow: hidden;
+}
+
+.navbar__link {
+  color: white;
+  transition: 0.5s ease;
+  padding-right: 1rem;
+}
+.navbar__link:hover {
+  color: aqua;
+}/*# sourceMappingURL=NavBar.css.map */
