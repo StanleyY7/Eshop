@@ -73,3 +73,21 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 281px) {
+  .SocialSection__container {
+    width: 100%;
+  }
+  .SocialSection__grid {
+    grid-template-columns: 1fr;
+  }
+  .SocialSection__photo-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 281px) {
+  .SocialSection__container {
+    width: 110%;
+  }
+}

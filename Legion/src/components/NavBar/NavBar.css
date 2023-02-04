@@ -8,7 +8,8 @@
   color: white;
   transition: 0.5s ease;
   padding-right: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .navbar__link:hover {
-  color: aqua;
+  color: rgba(188, 232, 255, 0.8823529412);
 }/*# sourceMappingURL=NavBar.css.map */

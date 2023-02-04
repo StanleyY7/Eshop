@@ -2,6 +2,7 @@
   height: 75vh;
   width: 98.35vw;
   background-color: white;
+
   padding: 0.5rem;
   text-align: center;
   color: black;
@@ -21,4 +22,14 @@
 .wrapper {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 281px) {
+  .productGrid__container {
+    width: 100%;
+    height: 50%;
+  }
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
 }

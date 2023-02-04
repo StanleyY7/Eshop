@@ -1,36 +1,37 @@
 import "./ProductCard.css";
-import { useState, useEffect } from "react";
-import { db } from "../../../firebase-config";
-import { collection, doc, getDocs } from "firebase/firestore";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import ProductPageCard from "../ProductPageCard/ProductPageCard";
 
-const ProductCard = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const getProducts = async () => {
-      const productsCollection = collection(db, "products");
-      const getData = await getDocs(productsCollection);
-      const dataList = getData.docs.map((doc) => doc.data());
-      setProducts(dataList);
-      console.log(dataList);
-    };
-
-    getProducts();
-  }, []);
-
+const ProductCard = ({ products, setSelectedProduct, selectedProduct }) => {
+  const [clicked, setClicked] = useState(false);
   return (
     <>
-      {products.map((product) => {
+      {products.map((product, index) => {
         return (
-          <section className="productCard__container">
-            <div className="productCard__grid">
-              <div className="productCard__Image-container">
-                <img className="productCard__image" src={product.Image} />
+          <NavLink className="link" to={`/Product/${product.Name}`} key={index}>
+            <section
+              key={index}
+              className="productCard__container"
+              onClick={() => {
+                setSelectedProduct(product);
+                setClicked(true);
+              }}
+            >
+              <div className="productCard__grid">
+                <div className="productCard__Image-container">
+                  <img className="productCard__image" src={product.Image} />
+                </div>
+                <p> {products.ID}</p>
+                <p> ${product.PPU}</p>
               </div>
-              <p> {product.Name}</p>
-              <p> ${product.PPU}</p>
-            </div>
-          </section>
+            </section>
+            <ProductPageCard
+              products={products}
+              toggle={clicked ? "show" : "hideGrid"}
+              selectedProduct={selectedProduct}
+            />
+          </NavLink>
         );
       })}
     </>

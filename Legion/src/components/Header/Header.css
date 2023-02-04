@@ -21,6 +21,7 @@ header {
 }
 
 .header__title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: relative;
   left: 2.75%;
   color: white;
@@ -28,5 +29,5 @@ header {
   transition: 0.5s ease;
 }
 .header__title:hover {
-  color: aqua;
+  color: rgba(188, 232, 255, 0.8823529412);
 }/*# sourceMappingURL=Header.css.map */

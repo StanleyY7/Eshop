@@ -13,6 +13,14 @@
   padding-bottom: 0.5rem;
 }
 
+.hideGrid {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 .productGrid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -22,4 +30,14 @@
 .wrapper {
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 281px) {
+  .productGrid__container {
+    width: 100%;
+    height: 50%;
+  }
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=productGrid.css.map */

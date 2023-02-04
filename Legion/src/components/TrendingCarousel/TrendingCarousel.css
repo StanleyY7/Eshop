@@ -6,4 +6,16 @@
   width: 100vw;
   padding: 0.5rem;
   background-color: white;
+}
+
+.trendingCarousel__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  line-height: 15vh;
+}
+
+@media screen and (max-width: 281px) {
+  .trendingCarousel__container {
+    width: 105%;
+  }
 }/*# sourceMappingURL=TrendingCarousel.css.map */

@@ -1,13 +1,12 @@
-.cover__container {
-  width: 100%;
-  height: 60vh;
-  background-image: url("../../assets/legionCover.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin-top: 2rem;
-}
-
 section {
   width: 100%;
+}
+
+@media screen and (max-width: 281px) {
+  body {
+    zoom: 0.8;
+  }
+  section {
+    width: 110%;
+  }
 }/*# sourceMappingURL=Cover.css.map */

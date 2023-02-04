@@ -16,7 +16,6 @@ const Header = () => {
           <NavBar />
         </header>
       </section>
-      <Cover />
     </>
   );
 };

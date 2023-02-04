@@ -1,1 +1,1 @@
-{"version":3,"sources":["Cover.scss","Cover.css"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,YAAA;EAEA,qDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,gBAAA;ACAF;;ADGA;EACE,WAAA;ACAF","file":"Cover.css"}
+{"version":3,"sources":["Cover.scss","Cover.css"],"names":[],"mappings":"AAAA;EACE,WAAA;ACCF;;ADEA;EACE;IACE,SAAA;ECCF;EDCA;IACE,WAAA;ECCF;AACF","file":"Cover.css"}

@@ -1,0 +1,25 @@
+.ProductPageCard__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ProductPageCard__image-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 3px solid black;
+
+  > img {
+    width: 80%;
+    padding: 2rem;
+  }
+}
+
+.ProductPageCard__content-container {
+  text-align: center;
+  color: black;
+  padding: 4rem;
+}
+
+select {
+  margin-left: 0.25rem;
+}
