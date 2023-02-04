@@ -9,4 +9,8 @@ section {
   section {
     width: 110%;
   }
+  .override {
+    background-size: cover;
+    object-fit: contain !important;
+  }
 }

@@ -30,4 +30,10 @@ header {
 }
 .header__title:hover {
   color: rgba(188, 232, 255, 0.8823529412);
+}
+
+@media screen and (max-width: 650px) {
+  header {
+    background-image: none;
+  }
 }/*# sourceMappingURL=Header.css.map */

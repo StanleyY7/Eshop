@@ -1,10 +1,9 @@
 import "./ProductPageCard.css";
 
 const ProductPageCard = ({ toggle, selectedProduct }) => {
-  console.log(selectedProduct);
   return (
     <>
-      <div className={toggle}>
+      <div className={`wrapper ${toggle}`}>
         {selectedProduct && (
           <section className="ProductPageCard__container">
             <div className={`ProductPageCard__grid`}>
@@ -17,7 +16,13 @@ const ProductPageCard = ({ toggle, selectedProduct }) => {
                 <p>Price: ${selectedProduct.PPU}</p>
                 <div>
                   Size:
-                  <select></select>
+                  <select>
+                    <option>{selectedProduct.Sizes[0]}</option>
+                    <option>{selectedProduct.Sizes[1]}</option>
+                    <option>{selectedProduct.Sizes[2]}</option>
+                    <option>{selectedProduct.Sizes[3]}</option>
+                    <option>{selectedProduct.Sizes[4]}</option>
+                  </select>
                 </div>
                 <p>{selectedProduct.Quantity} in Stock</p>
                 <button>Add to Cart</button>

@@ -15,7 +15,14 @@
 }
 
 @media screen and (max-width: 281px) {
+  .trendingCarousel__heading {
+    margin-left: 0.55rem;
+    font-size: 1.25rem;
+  }
   .trendingCarousel__container {
-    width: 105%;
+    width: 104%;
+  }
+  button {
+    display: none;
   }
 }

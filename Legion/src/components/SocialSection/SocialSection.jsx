@@ -38,7 +38,7 @@ const SocialSection = () => {
           </div>
 
           <div className="SocialSection__content">
-            <h2>Join the Legion.</h2>
+            <h2 className="SocialSection__title">Join the Legion.</h2>
             <p>And become a legionnaire by following our socials:</p>
             <a href="https://www.instagram.com/" target="_blank">
               <img className="instagram" src={instagramLogo} />

@@ -36,11 +36,18 @@ const App = () => {
               <HomePage
                 products={products}
                 setSelectedProduct={setSelectedProduct}
-                selectedProduct={selectedProduct}
               />
             }
           />
-          <Route path="/Kit" element={<AllProducts />} />
+          <Route
+            path="/Kit"
+            element={
+              <AllProducts
+                products={products}
+                setSelectedProduct={setSelectedProduct}
+              />
+            }
+          />
           <Route
             path="/Product/:id"
             element={<ProductPage selectedProduct={selectedProduct} />}

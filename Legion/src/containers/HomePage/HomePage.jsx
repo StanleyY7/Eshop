@@ -6,7 +6,7 @@ import TrendingCarousel from "../../components/TrendingCarousel/TrendingCarousel
 import Footer from "../../components/Footer/Footer";
 import { useEffect } from "react";
 
-const HomePage = ({ products, setSelectedProduct, selectedProduct }) => {
+const HomePage = ({ products, setSelectedProduct }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -17,7 +17,6 @@ const HomePage = ({ products, setSelectedProduct, selectedProduct }) => {
       <ProductGrid
         products={products}
         setSelectedProduct={setSelectedProduct}
-        selectedProduct={selectedProduct}
       />
       <SocialSection />
       <TrendingCarousel />

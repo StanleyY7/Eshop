@@ -9,4 +9,9 @@ section {
   section {
     width: 110%;
   }
+  .override {
+    background-size: cover;
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+  }
 }/*# sourceMappingURL=Cover.css.map */

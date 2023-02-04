@@ -35,7 +35,8 @@ header {
   }
 }
 
-
-@media screen and (max-width: 281px) {
-  
+@media screen and (max-width: 650px) {
+  header {
+    background-image: none;
+  }
 }

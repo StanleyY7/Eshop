@@ -1,7 +1,7 @@
 import "./productGrid.css";
 import ProductCard from "./ProductCard/ProductCard";
 
-const ProductGrid = ({ products, setSelectedProduct, selectedProduct }) => {
+const ProductGrid = ({ setSelectedProduct, products }) => {
   return (
     <>
       <section className="productGrid__container">
@@ -11,7 +11,6 @@ const ProductGrid = ({ products, setSelectedProduct, selectedProduct }) => {
             <ProductCard
               products={products}
               setSelectedProduct={setSelectedProduct}
-              selectedProduct={selectedProduct}
             />
           </div>
         </div>

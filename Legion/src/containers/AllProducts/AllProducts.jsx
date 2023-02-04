@@ -5,7 +5,7 @@ import Header from "../../components/Header/Header";
 import SocialSection from "../../components/SocialSection/SocialSection";
 import { useEffect } from "react";
 
-const AllProducts = () => {
+const AllProducts = ({ products, setSelectedProduct }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -14,8 +14,13 @@ const AllProducts = () => {
     <>
       <div className="page__container">
         <Header />
-        <ProductGrid />
-        <SocialSection />
+        <div className="wrapper">
+          <ProductGrid
+            products={products}
+            setSelectedProduct={setSelectedProduct}
+          />
+          <SocialSection />
+        </div>
       </div>
       <Footer />
     </>
