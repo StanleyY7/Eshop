@@ -14,7 +14,9 @@ const ProductPage = ({ selectedProduct }) => {
       <div>
         <Header />
         <ProductPageCard selectedProduct={selectedProduct} />
-        <SocialSection />
+        <div className="end-wrapper">
+          <SocialSection />
+        </div>
         <Footer />
       </div>
     </>

@@ -26,8 +26,64 @@
   }
   .trendingCarousel__container {
     width: 104%;
+    height: 45vh;
+  }
+
+  .trendingCarousel__grid {
+    line-height: 25.75vh;
+  }
+
+  .trendingCarousel__content-container {
+    margin-left: -1rem;
   }
   button {
-    display: none;
+    width: 50%;
+    padding: 0rem !important;
+    height: 30%;
+    outline: none !important;
+  }
+}
+
+@media screen and (min-width: 281px) and (max-width: 481px) {
+  .trendingCarousel__heading {
+    margin-left: 0.55rem;
+    font-size: 1.25rem;
+  }
+  .trendingCarousel__container {
+    width: 104%;
+    height: 45vh;
+  }
+
+  .trendingCarousel__grid {
+    line-height: 25.75vh;
+  }
+
+  .trendingCarousel__content-container {
+    margin-left: -1rem;
+  }
+  button {
+    width: 50%;
+    padding: 0rem !important;
+    height: 30%;
+    outline: none !important;
+  }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+  .trendingCarousel__heading {
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .trendingCarousel__grid {
+    line-height: 25.75vh;
+    margin-left: 2rem;
+  }
+
+  button {
+    width: 20%;
+    padding: 0rem !important;
+    height: 30%;
+    outline: none !important;
   }
 }

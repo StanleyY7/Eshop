@@ -1,1 +1,5 @@
-/*# sourceMappingURL=ProductPage.css.map */
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+  .end-wrapper {
+    width: 101.25%;
+  }
+}/*# sourceMappingURL=ProductPage.css.map */

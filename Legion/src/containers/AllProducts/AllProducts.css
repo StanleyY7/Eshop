@@ -2,4 +2,23 @@
   margin-top: 2rem;
   padding-top: 2rem;
   height: 87vh;
+}
+
+@media screen and (max-width: 281px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 281px) and (max-width: 481px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
 }/*# sourceMappingURL=AllProducts.css.map */

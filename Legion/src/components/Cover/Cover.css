@@ -14,4 +14,15 @@ section {
     -o-object-fit: contain !important;
        object-fit: contain !important;
   }
+}
+@media screen and (min-width: 281px) and (max-width: 581px) {
+  body {
+    zoom: 0.8;
+  }
+  section {
+    width: 110%;
+  }
+  .override {
+    background-size: cover;
+  }
 }/*# sourceMappingURL=Cover.css.map */

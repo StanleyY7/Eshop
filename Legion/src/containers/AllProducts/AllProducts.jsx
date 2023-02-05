@@ -14,15 +14,17 @@ const AllProducts = ({ products, setSelectedProduct }) => {
     <>
       <div className="page__container">
         <Header />
-        <div className="wrapper">
+        <div className="start-wrapper">
           <ProductGrid
             products={products}
             setSelectedProduct={setSelectedProduct}
           />
         </div>
       </div>
-      <SocialSection />
-      <Footer />
+      <div className="end-wrapper">
+        <SocialSection />
+        <Footer />
+      </div>
     </>
   );
 };

@@ -29,7 +29,7 @@ const TrendingCarousel = ({ products, setSelectedProduct }) => {
           <div>
             <button onClick={previous}> ⮜ </button>
           </div>
-          <div>
+          <div className="trendingCarousel__content-container">
             {favouritedProducts[currentIndex] && (
               <ProductCard
                 favouritedProducts={[
