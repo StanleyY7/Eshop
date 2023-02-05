@@ -19,9 +19,9 @@ const AllProducts = ({ products, setSelectedProduct }) => {
             products={products}
             setSelectedProduct={setSelectedProduct}
           />
-          <SocialSection />
         </div>
       </div>
+      <SocialSection />
       <Footer />
     </>
   );

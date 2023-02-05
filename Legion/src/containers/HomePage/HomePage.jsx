@@ -19,7 +19,10 @@ const HomePage = ({ products, setSelectedProduct }) => {
         setSelectedProduct={setSelectedProduct}
       />
       <SocialSection />
-      <TrendingCarousel />
+      <TrendingCarousel
+        products={products}
+        setSelectedProduct={setSelectedProduct}
+      />
       <Footer />
     </>
   );

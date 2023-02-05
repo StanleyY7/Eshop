@@ -1,9 +1,8 @@
 import "./ProductCard.css";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import ProductPageCard from "../ProductPageCard/ProductPageCard";
 
-const ProductCard = ({ products, setSelectedProduct }) => {
+const ProductCard = ({ products, setSelectedProduct, favouritedProducts }) => {
   const [clicked, setClicked] = useState(false);
 
   return (
@@ -25,7 +24,7 @@ const ProductCard = ({ products, setSelectedProduct }) => {
                 }}
               >
                 <div className="productCard__grid">
-                  <div className="productCard__Image-container">
+                  <div className="productCard__image-container">
                     <img className="productCard__image" src={product.Image} />
                   </div>
                   <p> {product.Name}</p>
@@ -35,6 +34,38 @@ const ProductCard = ({ products, setSelectedProduct }) => {
             </NavLink>
           );
         })}
+      <div className="favourited-wrapper">
+        {favouritedProducts &&
+          favouritedProducts.map((favouritedProduct, index) => {
+            return (
+              <NavLink
+                className="link"
+                to={`/Product/${favouritedProduct.Name}`}
+                key={index}
+              >
+                <section
+                  key={index}
+                  className="productCard__favourited-container"
+                  onClick={() => {
+                    setSelectedProduct(favouritedProduct);
+                    setClicked(true);
+                  }}
+                >
+                  <div className="productCard__favourited-grid">
+                    <div className="productCard__favourited-image-container">
+                      <img
+                        className="productCard__favourited-image"
+                        src={favouritedProduct.Image}
+                      />
+                    </div>
+                    <p> {favouritedProduct.Name}</p>
+                    <p className="ppu-text"> ${favouritedProduct.PPU}</p>
+                  </div>
+                </section>
+              </NavLink>
+            );
+          })}
+      </div>
     </>
   );
 };

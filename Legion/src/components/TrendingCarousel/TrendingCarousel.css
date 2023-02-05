@@ -2,16 +2,21 @@
   color: black;
   text-align: center;
   font-size: 1.125rem;
-  height: 30vh;
+  height: 40vh;
   width: 100vw;
   padding: 0.5rem;
   background-color: white;
 }
 
+.trendingCarousel__heading {
+  padding-bottom: 0.5rem;
+}
+
 .trendingCarousel__grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  line-height: 15vh;
+  padding-top: 0.25rem;
+  line-height: 20vh;
 }
 
 @media screen and (max-width: 281px) {
