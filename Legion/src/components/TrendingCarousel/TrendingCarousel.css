@@ -41,9 +41,9 @@
     outline: none !important;
   }
 }
-@media screen and (min-width: 281px) and (max-width: 481px) {
+@media screen and (min-width: 281px) and (max-width: 600px) {
   .trendingCarousel__heading {
-    margin-left: 0.55rem;
+    margin-left: 1.675rem;
     font-size: 1.25rem;
   }
   .trendingCarousel__container {
@@ -52,6 +52,7 @@
   }
   .trendingCarousel__grid {
     line-height: 25.75vh;
+    margin-left: 1rem;
   }
   .trendingCarousel__content-container {
     margin-left: -1rem;

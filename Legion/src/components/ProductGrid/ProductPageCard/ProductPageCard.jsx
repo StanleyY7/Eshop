@@ -7,8 +7,10 @@ const ProductPageCard = ({ toggle, selectedProduct }) => {
         {selectedProduct && (
           <section className="ProductPageCard__container">
             <div className={`ProductPageCard__grid`}>
-              <div className="ProductPageCard__image-container">
-                <img src={selectedProduct.Image} />
+              <div className="justify-wrapper">
+                <div className="ProductPageCard__image-container">
+                  <img src={selectedProduct.Image} />
+                </div>
               </div>
 
               <div className="ProductPageCard__content-container">
@@ -25,7 +27,7 @@ const ProductPageCard = ({ toggle, selectedProduct }) => {
                   </select>
                 </div>
                 <p>{selectedProduct.Quantity} in Stock</p>
-                <button>Add to Cart</button>
+                <button className="add-button">Add to Cart</button>
               </div>
             </div>
           </section>

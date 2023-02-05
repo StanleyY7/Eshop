@@ -2,6 +2,7 @@
   margin-top: 2rem;
   padding-top: 2rem;
   height: 87vh;
+  background-color: white;
 }
 
 @media screen and (max-width: 281px) {
@@ -10,10 +11,65 @@
     padding-bottom: 1rem;
   }
 }
-@media screen and (min-width: 281px) and (max-width: 481px) {
+@media screen and (min-width: 281px) and (max-width: 400px) {
   .page__container {
     height: 80%;
     padding-bottom: 1rem;
+  }
+  .start-wrapper {
+    margin-left: 4.5rem;
+  }
+  .allProducts__end-wrapper {
+    width: 116%;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 414px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+  .start-wrapper {
+    margin-left: 4.5rem;
+  }
+  .allProducts__end-wrapper {
+    width: 120%;
+  }
+}
+@media screen and (min-width: 414px) and (max-width: 430px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+  .start-wrapper {
+    margin-left: 4.5rem;
+  }
+  .allProducts__end-wrapper {
+    width: 125%;
+  }
+}
+@media screen and (min-width: 430px) and (max-width: 447px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+  .start-wrapper {
+    margin-left: 7.525rem;
+  }
+  .allProducts__end-wrapper {
+    width: 127.5%;
+  }
+}
+@media screen and (min-width: 447px) and (max-width: 600px) {
+  .page__container {
+    height: 80%;
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+  }
+  .start-wrapper {
+    margin-left: 25.5rem;
+  }
+  .allProducts__end-wrapper {
+    width: 150%;
   }
 }
 @media screen and (min-width: 1300px) and (max-width: 1400px) {

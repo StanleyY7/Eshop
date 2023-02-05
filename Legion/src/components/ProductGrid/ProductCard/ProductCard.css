@@ -85,7 +85,7 @@
     height: 100% !important;
   }
 }
-@media screen and (min-width: 281px) and (max-width: 481px) {
+@media screen and (min-width: 281px) and (max-width: 600px) {
   .productCard__grid {
     padding: 0.5rem 2rem;
   }

@@ -76,4 +76,22 @@ footer > img {
     width: 2.5rem;
     height: 2.5rem;
   }
+}
+@media screen and (max-width: 600px) and (max-height: 660px) {
+  footer {
+    width: 110%;
+  }
+  footer > img {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+@media screen and (max-width: 600px) and (min-height: 660px) and (max-height: 2000px) {
+  footer {
+    width: 110%;
+  }
+  footer > img {
+    width: 1rem;
+    height: 1rem;
+  }
 }/*# sourceMappingURL=Footer.css.map */

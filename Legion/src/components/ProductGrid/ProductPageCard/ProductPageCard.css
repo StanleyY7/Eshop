@@ -27,6 +27,7 @@
   color: black;
   padding: 4rem;
   width: 80%;
+  min-height: 100vh;
 }
 
 select {
@@ -55,5 +56,120 @@ select {
     margin-top: -8rem;
     width: 40%;
     margin-left: 3.5rem;
+  }
+  .add-button {
+    padding: 0.25rem 0.1rem !important;
+    height: 10%;
+    width: 25%;
+  }
+}
+@media screen and (min-width: 281px) and (max-width: 323px) {
+  .ProductPageCard__grid {
+    grid-template-columns: 1fr;
+    align-items: normal;
+    margin-top: 2.5rem;
+  }
+  .justify-wrapper {
+    width: 100%;
+    margin: auto;
+  }
+  .ProductPageCard__image-container {
+    width: 100%;
+    margin: auto;
+    padding: 2rem 6rem 2rem 2rem;
+  }
+  .ProductPageCard__image-container > img {
+    border: 3px solid black;
+  }
+  .ProductPageCard__content-container {
+    width: 100%;
+    margin: auto;
+  }
+  .add-button {
+    padding: 0.25rem 0.1rem !important;
+    height: 10%;
+    width: 25%;
+  }
+}
+@media screen and (min-width: 323px) and (max-width: 438px) {
+  .ProductPageCard__grid {
+    grid-template-columns: 1fr;
+    align-items: normal;
+    margin-top: 2.75rem;
+  }
+  .justify-wrapper {
+    width: 100%;
+    margin: auto;
+  }
+  .ProductPageCard__image-container {
+    width: 100%;
+    margin: auto;
+    padding: 2rem 6rem 2rem 2rem;
+  }
+  .ProductPageCard__image-container > img {
+    border: 3px solid black;
+  }
+  .ProductPageCard__content-container {
+    margin: auto;
+    width: 100%;
+  }
+  .add-button {
+    padding: 0.25rem 0.1rem !important;
+    height: 10%;
+    width: 25%;
+  }
+}
+@media screen and (min-width: 438px) and (max-width: 487px) {
+  .ProductPageCard__grid {
+    grid-template-columns: 1fr;
+    align-items: normal;
+    margin-top: 2.75rem;
+  }
+  .justify-wrapper {
+    width: 100%;
+    margin-left: 1.05rem;
+  }
+  .add-button {
+    padding: 0.25rem 0.1rem !important;
+    height: 10%;
+    width: 25%;
+  }
+  .ProductPageCard__image-container {
+    width: 45%;
+    padding: 2rem 6rem 2rem 2rem;
+  }
+  .ProductPageCard__image-container > img {
+    border: 3px solid black;
+  }
+  .ProductPageCard__content-container {
+    margin-left: auto;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 487px) and (max-width: 600px) {
+  .ProductPageCard__grid {
+    grid-template-columns: 1fr;
+    align-items: normal;
+    margin-top: 2.75rem;
+  }
+  .justify-wrapper {
+    width: 100%;
+    margin-left: 3.5rem;
+  }
+  .ProductPageCard__image-container {
+    width: 45%;
+    padding: 2rem 6rem 2rem 2rem;
+  }
+  .ProductPageCard__image-container > img {
+    border: 3px solid black;
+  }
+  .ProductPageCard__content-container {
+    margin-left: auto;
+    width: 100%;
+  }
+  .add-button {
+    padding: 0.25rem 0.1rem !important;
+    height: 10%;
+    width: 25%;
   }
 }/*# sourceMappingURL=ProductPageCard.css.map */

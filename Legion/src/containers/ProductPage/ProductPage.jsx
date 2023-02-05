@@ -13,11 +13,18 @@ const ProductPage = ({ selectedProduct }) => {
     <>
       <div>
         <Header />
-        <ProductPageCard selectedProduct={selectedProduct} />
+        <div className="productPageCard-wrapper">
+          <ProductPageCard selectedProduct={selectedProduct} />
+        </div>
+      </div>
+
+      <div className="end-container">
         <div className="end-wrapper">
           <SocialSection />
         </div>
-        <Footer />
+        <div className="footer-wrapper">
+          <Footer />
+        </div>
       </div>
     </>
   );
