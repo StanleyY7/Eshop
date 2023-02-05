@@ -9,21 +9,37 @@ const TrendingCarousel = ({ products, setSelectedProduct }) => {
     (product) => product.Favourited === true
   );
 
+  const next = () => {
+    setCurrentIndex((currentIndex + 1) % favouritedProducts.length);
+  };
+
+  const previous = () => {
+    if (currentIndex === 0) {
+      setCurrentIndex((currentIndex + 1) % favouritedProducts.length);
+    } else {
+      setCurrentIndex((currentIndex - 1) % favouritedProducts.length);
+    }
+  };
+
   return (
     <>
       <section className="trendingCarousel__container">
         <h2 className="trendingCarousel__heading">Trending Styles</h2>
         <div className="trendingCarousel__grid">
           <div>
-            <button> ⮜ </button>
+            <button onClick={previous}> ⮜ </button>
           </div>
           <div>
             {favouritedProducts[currentIndex] && (
               <ProductCard
                 favouritedProducts={[
                   favouritedProducts[currentIndex],
-                  favouritedProducts[currentIndex + 1],
-                  favouritedProducts[currentIndex + 2],
+                  favouritedProducts[
+                    (currentIndex + 1) % favouritedProducts.length
+                  ],
+                  favouritedProducts[
+                    (currentIndex + 2) % favouritedProducts.length
+                  ],
                 ]}
                 currentIndex={currentIndex}
                 setSelectedProduct={setSelectedProduct}
@@ -31,7 +47,7 @@ const TrendingCarousel = ({ products, setSelectedProduct }) => {
             )}
           </div>
           <div>
-            <button> ⮞ </button>
+            <button onClick={next}> ⮞ </button>
           </div>
         </div>
       </section>

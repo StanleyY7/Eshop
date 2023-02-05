@@ -36,18 +36,18 @@ const ProductCard = ({ products, setSelectedProduct, favouritedProducts }) => {
         })}
       <div className="favourited-wrapper">
         {favouritedProducts &&
-          favouritedProducts.map((favouritedProduct, index) => {
+          favouritedProducts.map((product, index) => {
             return (
               <NavLink
                 className="link"
-                to={`/Product/${favouritedProduct.Name}`}
+                to={`/Product/${product.Name}`}
                 key={index}
               >
                 <section
                   key={index}
                   className="productCard__favourited-container"
                   onClick={() => {
-                    setSelectedProduct(favouritedProduct);
+                    setSelectedProduct(product);
                     setClicked(true);
                   }}
                 >
@@ -55,11 +55,11 @@ const ProductCard = ({ products, setSelectedProduct, favouritedProducts }) => {
                     <div className="productCard__favourited-image-container">
                       <img
                         className="productCard__favourited-image"
-                        src={favouritedProduct.Image}
+                        src={product.Image}
                       />
                     </div>
-                    <p> {favouritedProduct.Name}</p>
-                    <p className="ppu-text"> ${favouritedProduct.PPU}</p>
+                    <p> {product.Name}</p>
+                    <p className="ppu-text"> ${product.PPU}</p>
                   </div>
                 </section>
               </NavLink>
