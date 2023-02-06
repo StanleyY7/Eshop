@@ -10,10 +10,10 @@ const NavBar = () => {
   };
   return (
     <nav className="navbar">
-      <NavLink className="navbar__link" to="/">
+      <NavLink className="navbar__link" to="/Eshop">
         About
       </NavLink>
-      <NavLink className="navbar__link" to="/Kit">
+      <NavLink className="navbar__link" to="/Eshop/Kit">
         Kit
       </NavLink>
       <NavLink className="navbar__link" to="#social" onClick={handleClick}>

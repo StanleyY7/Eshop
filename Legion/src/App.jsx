@@ -31,7 +31,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/"
+            path="/Eshop"
             element={
               <HomePage
                 products={products}
@@ -40,7 +40,7 @@ const App = () => {
             }
           />
           <Route
-            path="/Kit"
+            path="/Eshop/Kit"
             element={
               <AllProducts
                 products={products}
@@ -49,7 +49,7 @@ const App = () => {
             }
           />
           <Route
-            path="/Product/:id"
+            path="/Eshop/Product/:id"
             element={<ProductPage selectedProduct={selectedProduct} />}
           />
         </Routes>
