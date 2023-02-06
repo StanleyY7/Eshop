@@ -12,7 +12,7 @@ const ProductCard = ({ products, setSelectedProduct, favouritedProducts }) => {
           return (
             <NavLink
               className="link"
-              to={`/Product/${product.Name}`}
+              to={`/Eshop/Product/${product.Name}`}
               key={index}
             >
               <section

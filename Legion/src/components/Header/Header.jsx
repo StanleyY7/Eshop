@@ -9,7 +9,7 @@ const Header = () => {
     <>
       <section className="header__container">
         <header>
-          <NavLink className="header__title" to="/">
+          <NavLink className="header__title" to="/Eshop">
             Legion
           </NavLink>
 
