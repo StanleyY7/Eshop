@@ -44,7 +44,7 @@
 
 //
 
-@media screen and (min-width: 481px) and (max-width: 650px) {
+@media screen and (min-width: 481px) and (max-width: 510px) {
   .end-wrapper {
     width: 110%;
   }
@@ -53,6 +53,16 @@
   }
 }
 
+//
+
+@media screen and (min-width: 510px) and (max-width: 1000px) {
+  .end-wrapper {
+    width: 128%;
+  }
+  .footer-wrapper {
+    width: 128%;
+  }
+}
 //
 
 @media screen and (min-width: 1300px) and (max-width: 1400px) {

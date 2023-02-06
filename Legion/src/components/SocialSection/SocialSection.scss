@@ -118,6 +118,28 @@
   }
 }
 
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .SocialSection__container {
+    width: 110%;
+    margin-top: 20rem;
+  }
+  .SocialSection__grid {
+    grid-template-columns: 1fr;
+  }
+  .SocialSection__photo-container {
+    display: none;
+  }
+  .SocialSection__content {
+    font-size: 1rem !important;
+    padding: 0rem !important;
+    padding: 1rem !important;
+  }
+  .SocialSection__title {
+    margin-left: 0.325rem !important;
+    font-size: 1.65rem !important;
+  }
+}
+
 @media screen and (min-width: 1300px) and (max-width: 1400px) {
   .SocialSection__container {
     width: 108.75%;
