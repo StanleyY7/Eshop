@@ -2,6 +2,8 @@
 
 Link https://stanleyy7.github.io/Eshop/
 
+![eshopDisplay](https://user-images.githubusercontent.com/119549394/216974041-54bd5b91-6833-4a73-b96c-5ff6a7b427e0.png)
+
 ## Outline
 The main aim of this project was to utilise our existing knowledge of HTML, CSS/SCSS, React and Javascript to create a responsive e-commerce website. 
 
@@ -10,9 +12,6 @@ The main aim of this project was to utilise our existing knowledge of HTML, CSS/
 Below are 3 different designs/wireframes I created (using canva) for the project, ultimately I went with the Legion website design as it more closely resembled the MVP requirements of the project, I then adapted the design to better meet the MVP requirements further.
 
 ![Untitled design (13)](https://user-images.githubusercontent.com/119549394/215723162-8fb69dd3-7967-4bf8-944e-067ea26578be.png)
-
-### My Version
-
 
 ## MVP
 
