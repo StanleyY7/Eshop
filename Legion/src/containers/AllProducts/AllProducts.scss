@@ -10,20 +10,64 @@
     height: 80%;
     padding-bottom: 1rem;
   }
+
+  .start-wrapper {
+    margin-left: 0.35rem;
+  }
+
+  .allProducts__end-wrapper {
+    min-width: 100%;
+  }
 }
 
-@media screen and (min-width: 281px) and (max-width: 400px) {
+@media screen and (min-width: 281px) and (max-width: 320px) {
   .page__container {
     height: 80%;
     padding-bottom: 1rem;
   }
 
   .start-wrapper {
-    margin-left: 4.5rem;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    width: 100%;
   }
 
   .allProducts__end-wrapper {
-    width: 116%;
+    min-width: 102.5%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 350px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .start-wrapper {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    width: 112%;
+  }
+
+  .allProducts__end-wrapper {
+    min-width: 112%;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 400px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .start-wrapper {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    width: 128%;
+  }
+
+  .allProducts__end-wrapper {
+    min-width: 128%;
   }
 }
 
@@ -38,7 +82,7 @@
   }
 
   .allProducts__end-wrapper {
-    width: 120%;
+    width: 130%;
   }
 }
 
@@ -49,11 +93,11 @@
   }
 
   .start-wrapper {
-    margin-left: 4.5rem;
+    margin-left: 7.5rem;
   }
 
   .allProducts__end-wrapper {
-    width: 125%;
+    width: 135%;
   }
 }
 
@@ -64,27 +108,113 @@
   }
 
   .start-wrapper {
-    margin-left: 7.525rem;
+    margin-left: 10rem;
   }
 
   .allProducts__end-wrapper {
-    width: 127.5%;
+    width: 140%;
   }
 }
 
-@media screen and (min-width: 447px) and (max-width: 600px) {
+@media screen and (min-width: 447px) and (max-width: 463px) {
   .page__container {
-    height: 80%;
-    padding-top: 7rem;
+    height: 100%;
+    padding-top: 5rem;
     padding-bottom: 1rem;
   }
 
   .start-wrapper {
-    margin-left: 25.5rem;
+    margin-left: 9.5rem;
+  }
+
+  .allProducts__end-wrapper {
+    width: 144%;
+  }
+}
+
+@media screen and (min-width: 463px) and (max-width: 507px) {
+  .page__container {
+    height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  .start-wrapper {
+    margin-left: 10.75rem;
   }
 
   .allProducts__end-wrapper {
     width: 150%;
+  }
+}
+
+@media screen and (min-width: 507px) and (max-width: 516px) {
+  .page__container {
+    height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  .start-wrapper {
+    margin-left: 12.75rem;
+    width: 50%;
+  }
+
+  .allProducts__end-wrapper {
+    width: 142%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 516px) and (max-width: 545px) {
+  .page__container {
+    height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  .start-wrapper {
+    margin-left: 12.75rem;
+    width: 50%;
+  }
+
+  .allProducts__end-wrapper {
+    width: 150%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 545px) and (max-width: 566px) {
+  .page__container {
+    height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  .start-wrapper {
+    width: 100%;
+    margin-left: 9.5rem;
+  }
+
+  .allProducts__end-wrapper {
+    width: 175%;
+  }
+}
+
+@media screen and (min-width: 566px) and (max-width: 600px) {
+  .page__container {
+    height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  .start-wrapper {
+    width: 100%;
+    margin-left: 9.5rem;
+  }
+
+  .allProducts__end-wrapper {
+    width: 185%;
   }
 }
 
@@ -98,11 +228,10 @@
   .start-wrapper {
     position: relative;
     top: 50%;
-    left: 27.5%;
   }
 
   .allProducts__end-wrapper {
-    width: 150%;
+    width: 100%;
   }
 }
 
@@ -116,11 +245,10 @@
   .start-wrapper {
     position: relative;
     top: 50%;
-    left: 27.5%;
   }
 
   .allProducts__end-wrapper {
-    width: 152%;
+    width: 100%;
   }
 }
 
@@ -134,11 +262,10 @@
   .start-wrapper {
     position: relative;
     top: 50%;
-    left: 31.5%;
   }
 
   .allProducts__end-wrapper {
-    width: 160%;
+    width: 100%;
   }
 }
 
@@ -152,11 +279,10 @@
   .start-wrapper {
     position: relative;
     top: 50%;
-    left: 38.5%;
   }
 
   .allProducts__end-wrapper {
-    width: 170%;
+    width: 100%;
   }
 }
 
@@ -170,11 +296,10 @@
   .start-wrapper {
     position: relative;
     top: 50%;
-    left: 40%;
   }
 
   .allProducts__end-wrapper {
-    width: 176%;
+    width: 100%;
   }
 }
 
@@ -188,11 +313,10 @@
   .start-wrapper {
     position: relative;
     top: 50%;
-    left: 32%;
   }
 
   .allProducts__end-wrapper {
-    width: 160%;
+    width: 100%;
   }
 }
 

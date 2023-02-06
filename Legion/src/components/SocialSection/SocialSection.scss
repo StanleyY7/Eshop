@@ -76,7 +76,7 @@
 
 @media screen and (max-width: 281px) {
   .SocialSection__container {
-    width: 110%;
+    width: 100%;
     margin-top: 20rem;
   }
   .SocialSection__grid {
@@ -98,7 +98,7 @@
 
 @media screen and (min-width: 281px) and (max-width: 600px) {
   .SocialSection__container {
-    width: 110%;
+    width: 100%;
     margin-top: 20rem;
   }
   .SocialSection__grid {
@@ -120,14 +120,14 @@
 
 @media screen and (min-width: 600px) and (max-width: 1000px) {
   .SocialSection__container {
-    width: 110%;
+    width: 100%;
     margin-top: 20rem;
   }
-  .SocialSection__grid {
-    grid-template-columns: 1fr;
-  }
+
   .SocialSection__photo-container {
-    display: none;
+    > img {
+      width: 40%;
+    }
   }
   .SocialSection__content {
     font-size: 1rem !important;

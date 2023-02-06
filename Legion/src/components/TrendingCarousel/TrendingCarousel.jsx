@@ -47,7 +47,9 @@ const TrendingCarousel = ({ products, setSelectedProduct }) => {
             )}
           </div>
           <div>
-            <button onClick={next}> ⮞ </button>
+            <button className="next-button" onClick={next}>
+              ⮞
+            </button>
           </div>
         </div>
       </section>

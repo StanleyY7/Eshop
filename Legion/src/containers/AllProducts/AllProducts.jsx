@@ -21,6 +21,7 @@ const AllProducts = ({ products, setSelectedProduct }) => {
           />
         </div>
       </div>
+
       <div className="allProducts__end-wrapper">
         <SocialSection />
         <Footer />

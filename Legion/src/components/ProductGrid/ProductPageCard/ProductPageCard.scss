@@ -49,22 +49,23 @@ select {
   }
 
   .ProductPageCard__image-container {
-    width: 100%;
+    width: 60%;
     margin: auto;
-
     padding: 2rem 6rem 2rem 2rem;
     > img {
       border: 3px solid black;
     }
   }
+
   .ProductPageCard__content-container {
-    width: 100%;
-    margin: auto;
+    width: 55%;
+    margin-left: 0.25rem;
   }
+
   .add-button {
-    padding: 0.25rem 0.1rem !important;
     height: 10%;
-    width: 25%;
+    width: 30%;
+    margin: auto;
   }
 }
 
@@ -81,7 +82,7 @@ select {
   }
 
   .ProductPageCard__image-container {
-    width: 100%;
+    width: 65%;
     margin: auto;
     padding: 2rem 6rem 2rem 2rem;
     > img {
@@ -90,8 +91,8 @@ select {
   }
   .ProductPageCard__content-container {
     margin: auto;
-    margin-left: -0.6rem;
-    width: 100%;
+
+    width: 65%;
   }
   .add-button {
     padding: 0.25rem 0.1rem !important;
@@ -113,7 +114,7 @@ select {
   }
 
   .ProductPageCard__image-container {
-    width: 120%;
+    width: 80%;
     margin: auto;
     padding: 2rem 6rem 2rem 2rem;
     > img {
@@ -123,7 +124,7 @@ select {
   .ProductPageCard__content-container {
     margin: auto;
     margin-left: -0.6rem;
-    width: 120%;
+    width: 80%;
   }
   .add-button {
     padding: 0.25rem 0.1rem !important;
@@ -135,20 +136,18 @@ select {
 @media screen and (min-width: 600px) and (max-width: 1300px) {
   .ProductPageCard__grid {
     align-items: center;
-    gap: 5rem;
     margin-top: 7vh;
   }
 
   .justify-wrapper {
     width: 100%;
-    margin: 0rem 5rem;
   }
 
   .ProductPageCard__content-container {
-    width: 100%;
+    width: 50%;
     position: relative;
-    top: 35%;
-    left: 30%;
+    top: 30%;
+    left: 20%;
   }
 
   .add-button {
@@ -159,6 +158,10 @@ select {
 
   .ProductPageCard__content-container {
     min-height: 118vh;
+  }
+
+  .ProductPageCard__image-container {
+    width: 60%;
   }
 }
 
