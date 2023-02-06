@@ -124,3 +124,21 @@
     }
   }
 }
+
+@media screen and (min-width: 600px) and (max-width: 1300px) {
+  .productCard__grid {
+    padding: 0.5rem 2rem;
+  }
+
+  .productCard__favourited-grid {
+    width: 50% !important;
+    height: 25% !important;
+    padding: 1rem 1rem !important;
+    margin-left: 0.5rem !important;
+
+    > div > img {
+      width: 50% !important;
+      height: 100% !important;
+    }
+  }
+}

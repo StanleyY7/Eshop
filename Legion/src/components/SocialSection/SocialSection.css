@@ -155,7 +155,25 @@
     font-size: 1.65rem !important;
   }
 }
-@media screen and (min-width: 1300px) and (max-width: 1400px) {
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+  .SocialSection__container {
+    width: 100%;
+    margin-top: 20rem;
+  }
+  .SocialSection__photo-container > img {
+    width: 40%;
+  }
+  .SocialSection__content {
+    font-size: 1rem !important;
+    padding: 0rem !important;
+    padding: 1rem !important;
+  }
+  .SocialSection__title {
+    margin-left: 0.325rem !important;
+    font-size: 1.65rem !important;
+  }
+}
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
   .SocialSection__container {
     width: 108.75%;
   }

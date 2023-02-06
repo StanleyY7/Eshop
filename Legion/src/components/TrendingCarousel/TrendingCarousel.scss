@@ -104,7 +104,33 @@
   }
 }
 
-@media screen and (min-width: 1300px) and (max-width: 1400px) {
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+  .trendingCarousel__heading {
+    margin-left: 1.675rem;
+    font-size: 1.35rem;
+  }
+  .trendingCarousel__container {
+    width: 98%;
+    height: 45vh;
+  }
+
+  .trendingCarousel__grid {
+    line-height: 25.75vh;
+    margin-left: 1rem;
+  }
+
+  .trendingCarousel__content-container {
+    margin-left: -1rem;
+  }
+  button {
+    width: 25%;
+    padding: 0rem !important;
+    height: 30%;
+    outline: none !important;
+  }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
   .trendingCarousel__heading {
     margin-left: 1.5rem;
     font-size: 1.5rem;
@@ -120,5 +146,9 @@
     padding: 0rem !important;
     height: 30%;
     outline: none !important;
+  }
+
+  .trendingCarousel__container {
+    height: 45vh;
   }
 }

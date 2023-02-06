@@ -25,12 +25,12 @@
     width: 100%;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1300px) {
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
   .end-wrapper {
     width: 101.25%;
   }
 }
-@media screen and (min-width: 1300px) and (max-width: 1400px) {
+@media screen and (min-width: 1300px) and (max-width: 1500px) {
   .end-wrapper {
     width: 101.25%;
   }
