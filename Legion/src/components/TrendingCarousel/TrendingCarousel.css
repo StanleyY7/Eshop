@@ -2,9 +2,9 @@
   color: black;
   text-align: center;
   font-size: 1.125rem;
+  padding: 0.5rem;
   height: 40vh;
   width: 100vw;
-  padding: 0.5rem;
   background-color: white;
 }
 
@@ -13,14 +13,22 @@
 }
 
 .trendingCarousel__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   padding-top: 0.25rem;
-  line-height: 20vh;
+  height: 70%;
+  align-items: center;
+  display: flex;
+}
+
+.previous-button {
+  margin-left: 0.75rem;
+}
+
+.next-button {
+  margin-right: 0.75rem;
 }
 
 /* Media Queries */
-@media screen and (max-width: 281px) {
+@media screen and (max-width: 323px) {
   .trendingCarousel__heading {
     font-size: 1.25rem;
   }
@@ -40,34 +48,47 @@
     height: 30%;
     outline: none !important;
     transform: scale(0.7);
-    margin-left: -1rem;
+    margin-left: -0.6rem;
     margin-right: 1.25rem;
+  }
+  .previous-button {
+    margin-left: 0rem !important;
   }
   .next-button {
     margin-left: 0.5rem;
+    margin-right: 0rem !important;
   }
 }
-@media screen and (min-width: 281px) and (max-width: 600px) {
+@media screen and (min-width: 323px) and (max-width: 600px) {
   .trendingCarousel__heading {
     margin-left: 1.675rem;
     font-size: 1.25rem;
   }
   .trendingCarousel__container {
-    width: 93%;
+    width: 96%;
     height: 45vh;
   }
   .trendingCarousel__grid {
-    line-height: 25.75vh;
-    margin-left: 1rem;
+    height: 70%;
+    align-items: center;
+    display: flex;
   }
   .trendingCarousel__content-container {
     margin-left: -1rem;
   }
+  .previous-button {
+    margin-left: 0rem !important;
+    margin-right: 0.5rem;
+  }
   button {
-    width: 50%;
-    padding: 0rem !important;
-    height: 30%;
+    width: 80%;
+    padding: 1rem !important;
+    height: 15%;
     outline: none !important;
+  }
+  .next-button {
+    margin-left: 0.5rem;
+    margin-right: 0rem !important;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1000px) {
@@ -76,20 +97,23 @@
     font-size: 1.35rem;
   }
   .trendingCarousel__container {
-    width: 98%;
+    width: 97%;
     height: 45vh;
   }
   .trendingCarousel__grid {
-    line-height: 25.75vh;
+    height: 70%;
+    align-items: center;
+    display: flex;
     margin-left: 1rem;
   }
   .trendingCarousel__content-container {
     margin-left: -1rem;
+    width: 90%;
   }
   button {
-    width: 25%;
-    padding: 0rem !important;
-    height: 30%;
+    width: 80%;
+    padding: 1rem !important;
+    height: 15%;
     outline: none !important;
   }
 }
@@ -99,20 +123,23 @@
     font-size: 1.35rem;
   }
   .trendingCarousel__container {
-    width: 98%;
+    width: 97.5%;
     height: 45vh;
   }
   .trendingCarousel__grid {
-    line-height: 25.75vh;
-    margin-left: 1rem;
+    height: 70%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
   }
   .trendingCarousel__content-container {
     margin-left: -1rem;
+    width: 75%;
   }
   button {
-    width: 25%;
-    padding: 0rem !important;
-    height: 30%;
+    width: 80%;
+    padding: 1rem !important;
+    height: 15%;
     outline: none !important;
   }
 }
@@ -122,14 +149,23 @@
     font-size: 1.5rem;
   }
   .trendingCarousel__grid {
-    line-height: 25.75vh;
-    margin-left: 2rem;
+    height: 70%;
+    align-items: center;
+    display: flex;
   }
   button {
-    width: 20%;
-    padding: 0rem !important;
+    width: 80%;
+    padding: 1rem !important;
     height: 30%;
     outline: none !important;
+  }
+  .trendingCarousel__container {
+    height: 45vh;
+  }
+}
+@media screen and (min-width: 1500px) and (max-width: 1800px) {
+  .trendingCarousel__content-container {
+    width: 90%;
   }
   .trendingCarousel__container {
     height: 45vh;

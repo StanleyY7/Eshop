@@ -23,11 +23,13 @@ const TrendingCarousel = ({ products, setSelectedProduct }) => {
 
   return (
     <>
-      <section className="trendingCarousel__container">
+      <div className="trendingCarousel__container">
         <h2 className="trendingCarousel__heading">Trending Styles</h2>
         <div className="trendingCarousel__grid">
           <div>
-            <button onClick={previous}> ⮜ </button>
+            <button className="previous-button" onClick={previous}>
+              ⮜
+            </button>
           </div>
           <div className="trendingCarousel__content-container">
             {favouritedProducts[currentIndex] && (
@@ -41,7 +43,6 @@ const TrendingCarousel = ({ products, setSelectedProduct }) => {
                     (currentIndex + 2) % favouritedProducts.length
                   ],
                 ]}
-                currentIndex={currentIndex}
                 setSelectedProduct={setSelectedProduct}
               />
             )}
@@ -52,7 +53,7 @@ const TrendingCarousel = ({ products, setSelectedProduct }) => {
             </button>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

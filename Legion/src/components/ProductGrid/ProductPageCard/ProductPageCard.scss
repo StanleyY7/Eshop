@@ -59,7 +59,7 @@ select {
 
   .ProductPageCard__content-container {
     width: 55%;
-    margin-left: 0.25rem;
+    margin: auto;
   }
 
   .add-button {
@@ -136,7 +136,7 @@ select {
 @media screen and (min-width: 600px) and (max-width: 1500px) {
   .ProductPageCard__grid {
     align-items: center;
-    margin-top: 4vh;
+    margin-top: -15vh;
   }
 
   .justify-wrapper {
@@ -146,7 +146,7 @@ select {
   .ProductPageCard__content-container {
     width: 50%;
     position: relative;
-    top: 30%;
+    top: 35%;
     left: 20%;
   }
 
