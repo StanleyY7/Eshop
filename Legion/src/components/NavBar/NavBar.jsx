@@ -1,20 +1,20 @@
 import "./NavBar.css";
-import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import About from "../ABout/About";
 import Cart from "./Cart/Cart";
 const NavBar = () => {
   const [open, setOpened] = useState(false);
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const openModal = () => {
     setOpened(true);
   };
 
   const handleClick = () => {
-    history.push("#social");
+    navigate.push("#social");
   };
+
   return (
     <>
       <nav className="navbar">

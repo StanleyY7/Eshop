@@ -27,7 +27,12 @@ const ProductPageCard = ({ toggle, selectedProduct }) => {
                   </select>
                 </div>
                 <p>{selectedProduct.Quantity} in Stock</p>
-                <button className="add-button">Add to Cart</button>
+                <button
+                  className="add-button"
+                  onClick={() => setAddProductToCart(selectedProduct)}
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </section>
