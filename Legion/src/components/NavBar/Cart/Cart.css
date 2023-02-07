@@ -1,0 +1,22 @@
+.cart__container {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  width: 3.5vw;
+  height: 2vw;
+  background-color: rgba(191, 206, 218, 0.59);
+}
+
+.cart__image-container {
+  position: fixed;
+  top: 29.25%;
+  left: 0.5%;
+}
+.cart__image-container > img {
+  width: 2.75rem;
+  transition: 0.3s ease;
+  opacity: 0.85;
+}
+.cart__image-container > img:hover {
+  transform: scale(1.025);
+}/*# sourceMappingURL=Cart.css.map */
