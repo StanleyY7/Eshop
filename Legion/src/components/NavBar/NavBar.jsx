@@ -1,8 +1,10 @@
 import "./NavBar.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 import { useState } from "react";
 import About from "../ABout/About";
 import Cart from "./Cart/Cart";
+
 const NavBar = () => {
   const [open, setOpened] = useState(false);
   const navigate = useNavigate();
@@ -28,6 +30,7 @@ const NavBar = () => {
           Contact
         </NavLink>
         <About open={open} setOpened={setOpened} />
+        <HamburgerMenu openModal={openModal} />
       </nav>
       <About />
       <Cart />

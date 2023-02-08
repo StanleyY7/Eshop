@@ -36,8 +36,23 @@ header {
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) and (max-height: 509px) {
+  .header__container {
+    height: 12%;
+  }
   header {
     background-image: none;
+  }
+}
+
+@media screen and (max-width: 650px) and (min-height: 509px) {
+  header {
+    background-image: none;
+  }
+}
+
+@media screen and (max-height: 509px) {
+  .header__container {
+    height: 11%;
   }
 }

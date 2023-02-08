@@ -17,3 +17,9 @@
     color: $highlightColor;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .navbar__link {
+    display: none;
+  }
+}
