@@ -1,25 +1,40 @@
 import "./NavBar.css";
-import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
+import { useState } from "react";
+import About from "../ABout/About";
+import Cart from "./Cart/Cart";
 
 const NavBar = () => {
-  const history = useNavigate();
+  const [open, setOpened] = useState(false);
+  const navigate = useNavigate();
+
+  const openModal = () => {
+    setOpened(true);
+  };
 
   const handleClick = () => {
-    history.push("#social");
+    navigate.push("#social");
   };
+
   return (
-    <nav className="navbar">
-      <NavLink className="navbar__link" to="/Eshop">
-        About
-      </NavLink>
-      <NavLink className="navbar__link" to="/Eshop/Kit">
-        Kit
-      </NavLink>
-      <NavLink className="navbar__link" to="#social" onClick={handleClick}>
-        Contact
-      </NavLink>
-    </nav>
+    <>
+      <nav className="navbar">
+        <a className="navbar__link" onClick={openModal}>
+          About
+        </a>
+        <NavLink className="navbar__link" to="/Eshop/Kit">
+          Kit
+        </NavLink>
+        <NavLink className="navbar__link" to="#social" onClick={handleClick}>
+          Contact
+        </NavLink>
+        <About open={open} setOpened={setOpened} />
+        <HamburgerMenu openModal={openModal} />
+      </nav>
+      <About />
+      <Cart />
+    </>
   );
 };
 

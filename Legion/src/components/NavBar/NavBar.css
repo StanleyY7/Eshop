@@ -9,7 +9,14 @@
   transition: 0.5s ease;
   padding-right: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
 }
 .navbar__link:hover {
   color: rgba(188, 232, 255, 0.8823529412);
+}
+
+@media screen and (max-width: 600px) {
+  .navbar__link {
+    display: none;
+  }
 }/*# sourceMappingURL=NavBar.css.map */

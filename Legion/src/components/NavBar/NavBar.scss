@@ -1,3 +1,5 @@
+@import "../../theme.scss";
+
 .navbar {
   padding-right: 0.5rem;
   font-size: 1.4rem;
@@ -9,8 +11,15 @@
   transition: 0.5s ease;
   padding-right: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
 
   &:hover {
-    color: #bce8ffe1;
+    color: $highlightColor;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar__link {
+    display: none;
   }
 }

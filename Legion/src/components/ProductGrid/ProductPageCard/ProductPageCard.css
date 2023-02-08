@@ -131,8 +131,8 @@ select {
   .ProductPageCard__content-container {
     width: 50%;
     position: relative;
-    top: 35%;
-    left: 20%;
+    top: 27%;
+    left: 15%;
   }
   .add-button {
     padding: 0.25rem 0.1rem !important;
@@ -150,7 +150,7 @@ select {
   .ProductPageCard__grid {
     align-items: center;
     gap: 5rem;
-    margin-top: 7vh;
+    margin-top: -2vh;
   }
   .justify-wrapper {
     width: 50%;

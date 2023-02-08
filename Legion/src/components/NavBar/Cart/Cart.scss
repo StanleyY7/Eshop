@@ -1,0 +1,40 @@
+.cart__container {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  width: 4rem;
+  height: 2.5rem;
+  background-color: rgba(191, 206, 218, 0.59);
+}
+
+.cart__image-container {
+  position: fixed;
+  top: 29.7%;
+  left: 0.5%;
+  .cart__image {
+    width: 2.5rem;
+    transition: 0.3s ease;
+    opacity: 0.85;
+    &:hover {
+      transform: scale(1.025);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .cart__container {
+    width: 3rem;
+    height: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+  .cart__container {
+    width: 3rem;
+    height: 2.5rem;
+  }
+
+  .cart__image-container {
+    left: 0.25%;
+  }
+}

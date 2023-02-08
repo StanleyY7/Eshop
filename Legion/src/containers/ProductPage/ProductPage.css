@@ -1,14 +1,9 @@
 /* Media Queries */
-@media screen and (min-width: 281px) and (max-width: 1000px) {
+@media screen and (min-width: 281px) and (max-width: 1500px) {
   .end-wrapper {
     width: 100%;
   }
   .footer-wrapper {
     width: 100%;
-  }
-}
-@media screen and (min-width: 1000px) and (max-width: 1500px) {
-  .end-wrapper {
-    width: 101.25%;
   }
 }/*# sourceMappingURL=ProductPage.css.map */

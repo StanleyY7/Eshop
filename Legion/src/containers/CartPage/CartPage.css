@@ -1,0 +1,14 @@
+.CartPage__content-container {
+  min-height: 100vh;
+  color: black;
+  text-align: center;
+  padding-top: 2.5rem;
+  width: 100%;
+}
+.CartPage__content-container .CartPage__text {
+  padding-top: 4rem;
+}
+
+.test {
+  color: black;
+}/*# sourceMappingURL=CartPage.css.map */
