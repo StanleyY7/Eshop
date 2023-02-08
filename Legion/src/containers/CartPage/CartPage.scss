@@ -3,12 +3,34 @@
   color: black;
   text-align: center;
   padding-top: 2.5rem;
-  width: 100%;
+  width: 100vw;
   .CartPage__text {
     padding-top: 4rem;
   }
 }
 
-.test {
-  color: black;
+.cartProduct__container {
+  display: flex;
+  justify-content: center;
+}
+
+.cartProduct__grid {
+  border: 5px groove black;
+  width: 25%;
+  padding: 2rem;
+}
+
+.cartProduct__image {
+  width: 50%;
+}
+
+.cartProduct_buttons {
+  display: flex;
+
+  justify-content: center;
+  > button {
+    width: 5rem;
+    height: 4rem;
+    margin-left: 0.25rem;
+  }
 }
