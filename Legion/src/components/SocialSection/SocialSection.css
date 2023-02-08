@@ -44,19 +44,7 @@
 }
 
 .fade-in-right {
-  -webkit-animation: fade-in-right 2.5s ease-in-out;
-          animation: fade-in-right 2.5s ease-in-out;
-}
-
-@-webkit-keyframes fade-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(300px);
-  }
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
+  animation: fade-in-right 2.5s ease-in-out;
 }
 
 @keyframes fade-in-right {
@@ -70,19 +58,7 @@
   }
 }
 .fade-in-left {
-  -webkit-animation: fade-in-left 2.5s ease-in-out;
-          animation: fade-in-left 2.5s ease-in-out;
-}
-
-@-webkit-keyframes fade-in-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-300px);
-  }
-  100% {
-    transform: translate(0px, 0);
-    opacity: 1;
-  }
+  animation: fade-in-left 2.5s ease-in-out;
 }
 
 @keyframes fade-in-left {

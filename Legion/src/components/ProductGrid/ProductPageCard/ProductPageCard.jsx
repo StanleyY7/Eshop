@@ -1,6 +1,58 @@
 import "./ProductPageCard.css";
+import { db } from "../../../firebase-config";
+import { useState } from "react";
+import {
+  addDoc,
+  updateDoc,
+  getDoc,
+  setDoc,
+  doc,
+  collection,
+  increment,
+} from "@firebase/firestore";
 
 const ProductPageCard = ({ toggle, selectedProduct }) => {
+  const [amountBuying, setAmountBuying] = useState(0);
+  const [selectedSize, setSelectedSize] = useState(selectedProduct.Sizes[0]);
+
+  const handleSizeChange = (event) => {
+    setSelectedSize(event.target.value);
+  };
+
+  const addCart = async () => {
+    setAmountBuying(amountBuying + 1);
+
+    try {
+      const docRef = doc(db, "Cart", selectedProduct.ID);
+      const docSnapshot = await getDoc(docRef);
+      if (docSnapshot.exists) {
+        await setDoc(docRef, {
+          Name: selectedProduct.Name,
+          Price: selectedProduct.PPU,
+          Quantity: selectedProduct.Quantity,
+          Image: selectedProduct.Image,
+          Size: selectedSize,
+          Amount: increment(1),
+        });
+        console.log("Another product added to cart, ID:", selectedProduct.ID);
+        alert(`Another ${selectedProduct.Name} has been added to the cart!`);
+      } else {
+        await setDoc(docRef, {
+          Name: selectedProduct.Name,
+          Price: selectedProduct.PPU,
+          Quantity: selectedProduct.Quantity,
+          Image: selectedProduct.Image,
+          Size: selectedSize,
+          Amount: increment(1),
+        });
+        console.log("product added to cart, ID:", selectedProduct.ID);
+        alert(`${selectedProduct.Name} has been added to the cart!`);
+      }
+    } catch (e) {
+      console.log("Error adding to cart", e);
+    }
+  };
+
   return (
     <>
       <div className={`wrapper ${toggle}`}>
@@ -18,19 +70,15 @@ const ProductPageCard = ({ toggle, selectedProduct }) => {
                 <p>Price: ${selectedProduct.PPU}</p>
                 <div>
                   Size:
-                  <select>
-                    <option>{selectedProduct.Sizes[0]}</option>
-                    <option>{selectedProduct.Sizes[1]}</option>
-                    <option>{selectedProduct.Sizes[2]}</option>
-                    <option>{selectedProduct.Sizes[3]}</option>
-                    <option>{selectedProduct.Sizes[4]}</option>
+                  <select value={selectedSize} onChange={handleSizeChange}>
+                    {selectedProduct.Sizes &&
+                      selectedProduct.Sizes.map((size) => (
+                        <option key={size}>{size}</option>
+                      ))}
                   </select>
                 </div>
                 <p>{selectedProduct.Quantity} in Stock</p>
-                <button
-                  className="add-button"
-                  onClick={() => setAddProductToCart(selectedProduct)}
-                >
+                <button className="add-button" onClick={addCart}>
                   Add to Cart
                 </button>
               </div>
