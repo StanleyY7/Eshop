@@ -1,18 +1,9 @@
 import "./ProductPageCard.css";
 import { db } from "../../../firebase-config";
 import { useState } from "react";
-import {
-  addDoc,
-  updateDoc,
-  getDoc,
-  setDoc,
-  doc,
-  collection,
-  increment,
-} from "@firebase/firestore";
+import { getDoc, setDoc, doc } from "@firebase/firestore";
 
 const ProductPageCard = ({ toggle, selectedProduct }) => {
-  const [amountBuying, setAmountBuying] = useState(0);
   const [selectedSize, setSelectedSize] = useState(selectedProduct.Sizes[0]);
 
   const handleSizeChange = (event) => {
@@ -20,22 +11,22 @@ const ProductPageCard = ({ toggle, selectedProduct }) => {
   };
 
   const addCart = async () => {
-    setAmountBuying(amountBuying + 1);
-
     try {
       const docRef = doc(db, "Cart", selectedProduct.ID);
       const docSnapshot = await getDoc(docRef);
+      let amount = 1;
       if (docSnapshot.exists) {
+        amount = docSnapshot.data().Amount + 1;
         await setDoc(docRef, {
           Name: selectedProduct.Name,
           Price: selectedProduct.PPU,
           Quantity: selectedProduct.Quantity,
           Image: selectedProduct.Image,
           Size: selectedSize,
-          Amount: increment(1),
+          Amount: amount,
         });
         console.log("Another product added to cart, ID:", selectedProduct.ID);
-        alert(`Another ${selectedProduct.Name} has been added to the cart!`);
+        alert(`${selectedProduct.Name} has been added to the cart!`);
       } else {
         await setDoc(docRef, {
           Name: selectedProduct.Name,
@@ -43,7 +34,7 @@ const ProductPageCard = ({ toggle, selectedProduct }) => {
           Quantity: selectedProduct.Quantity,
           Image: selectedProduct.Image,
           Size: selectedSize,
-          Amount: increment(1),
+          Amount: selectedProduct.Amount + 1,
         });
         console.log("product added to cart, ID:", selectedProduct.ID);
         alert(`${selectedProduct.Name} has been added to the cart!`);

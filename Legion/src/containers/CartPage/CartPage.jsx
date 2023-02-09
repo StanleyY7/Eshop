@@ -33,12 +33,9 @@ const CartPage = () => {
           <h1>Checkout</h1>
           <div>
             {cartData ? (
-              cartData.map((cartProduct) => {
+              cartData.map((cartProduct, index) => {
                 return (
-                  <section
-                    key={cartProduct.ID}
-                    className="cartProduct__container"
-                  >
+                  <section key={index} className="cartProduct__container">
                     <div className="cartProduct__grid">
                       <img
                         className="cartProduct__image"
