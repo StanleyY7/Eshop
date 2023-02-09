@@ -4,12 +4,11 @@ import ProductGrid from "../../components/ProductGrid/productGrid";
 import SocialSection from "../../components/SocialSection/SocialSection";
 import TrendingCarousel from "../../components/TrendingCarousel/TrendingCarousel";
 import Footer from "../../components/Footer/Footer";
-import { useEffect } from "react";
+
+import { startPageAtTop } from "../../Services/general";
 
 const HomePage = ({ products, setSelectedProduct }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  startPageAtTop;
   return (
     <>
       <Header />

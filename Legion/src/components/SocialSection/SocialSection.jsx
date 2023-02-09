@@ -4,25 +4,14 @@ import socialPhotoTwo from "../../assets/socialTwo.png";
 import socialPhotoOne from "../../assets/socialOne.png";
 import socialPhotoThree from "../../assets/socialThree.png";
 import socialPhotoFour from "../../assets/socialFour.png";
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
+import { observeSocialFadeIn } from "../../Services/general";
 
 const SocialSection = () => {
   const [isInView, setIsInView] = useState(false);
 
   const socialRef = useRef();
-
-  useEffect(() => {
-    const socialSectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-        } else {
-          setIsInView(false);
-        }
-      });
-    });
-    socialSectionObserver.observe(socialRef.current);
-  }, []);
+  observeSocialFadeIn(socialRef, setIsInView);
 
   return (
     <section className="SocialSection__container" id="social" ref={socialRef}>

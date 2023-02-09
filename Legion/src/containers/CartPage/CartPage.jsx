@@ -1,29 +1,19 @@
 import Header from "../../components/Header/Header";
 import SocialSection from "../../components/SocialSection/SocialSection";
 import Footer from "../../components/Footer/Footer";
-import { useEffect, useState } from "react";
-import { db } from "../../firebase-config";
+import { useState } from "react";
 
 import "./CartPage.css";
-import { getDocs, collection } from "@firebase/firestore";
+import { startPageAtTop } from "../../Services/general";
+import { getProductsFromCart, addCart } from "../../Services/cart";
+import { minusCart } from "../../Services/cart";
 
 const CartPage = () => {
   const [cartData, setCartData] = useState([]);
+  const [displayNone, setDisplayNone] = useState(false);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    const getCartProducts = async () => {
-      const cartProductsCollection = collection(db, "Cart");
-      const getCartData = await getDocs(cartProductsCollection);
-      const mappedCartData = getCartData.docs.map((doc) => doc.data());
-      setCartData(mappedCartData);
-      console.log(mappedCartData);
-    };
-    getCartProducts();
-  }, []);
+  getProductsFromCart(setCartData);
+  startPageAtTop();
 
   return (
     <>
@@ -33,23 +23,43 @@ const CartPage = () => {
           <h1>Checkout</h1>
           <div>
             {cartData ? (
-              cartData.map((cartProduct, index) => {
+              cartData.map((cartProduct) => {
                 return (
-                  <section key={index} className="cartProduct__container">
-                    <div className="cartProduct__grid">
-                      <img
-                        className="cartProduct__image"
-                        src={cartProduct.Image}
-                      />
-                      <p>{cartProduct.Name}</p>
-                      <p>{cartProduct.Size}</p>
-                      <p>${cartProduct.Price}</p>
-                      <div className="cartProduct_buttons">
-                        <button>-</button>
-                        <button>+</button>
-                      </div>
-                    </div>
-                  </section>
+                  <div
+                    key={cartProduct.ID}
+                    className={`${displayNone ? "hide" : "show"}`}
+                  >
+                    {cartProduct.Amount >= 1 ? (
+                      <section
+                        key={cartProduct.ID}
+                        className="cartProduct__container"
+                      >
+                        <div className="cartProduct__grid">
+                          <img
+                            className="cartProduct__image"
+                            src={cartProduct.Image}
+                          />
+                          <p>{cartProduct.Name}</p>
+                          <p>{cartProduct.Size}</p>
+                          <p>${cartProduct.Price}</p>
+                          <div className="cartProduct_buttons">
+                            <button onClick={() => minusCart(cartProduct)}>
+                              -
+                            </button>
+                            <button
+                              onClick={() =>
+                                addCart(cartProduct, cartProduct.Size)
+                              }
+                            >
+                              +
+                            </button>
+                          </div>
+                        </div>
+                      </section>
+                    ) : (
+                      () => setDisplayNone(true)
+                    )}
+                  </div>
                 );
               })
             ) : (

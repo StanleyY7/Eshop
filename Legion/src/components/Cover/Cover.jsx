@@ -3,17 +3,14 @@ import legionCoverOne from "../../assets/legionCover.png";
 import legionCoverTwo from "../../assets/legionCoverTwo.png";
 import legionCoverThree from "../../assets/legionCoverThree.png";
 import { useState, useEffect } from "react";
+import { slideShow } from "../../Services/general";
 
 const Cover = () => {
   const coverImages = [legionCoverOne, legionCoverTwo, legionCoverThree];
   const [currentImage, setCurrentImage] = useState(0);
 
-  useEffect(() => {
-    const intervalImageIndex = setInterval(() => {
-      setCurrentImage((currentImage + 1) % coverImages.length);
-    }, 7000);
-    return () => clearInterval(intervalImageIndex);
-  }, [currentImage, coverImages.length]);
+  slideShow(setCurrentImage, currentImage, coverImages);
+
   return (
     <section>
       <div

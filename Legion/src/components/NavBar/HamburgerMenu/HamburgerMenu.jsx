@@ -1,23 +1,21 @@
 import { useState } from "react";
+import { updateMenu } from "../../../Services/nav";
 
 import "./HamburgerMenu.css";
 
-const HamburgerMenu = ({ openModal }) => {
+const HamburgerMenu = () => {
   const [burgerclass, setBurgerClass] = useState("burger__class unclicked");
   const [menuClass, setMenuClass] = useState("menu hidden");
   const [menuClicked, setMenuClicked] = useState(false);
 
-  const updateMenu = () => {
-    setMenuClicked(!menuClicked);
-    setBurgerClass(
-      menuClicked ? "burger__class unclicked" : "burger__class clicked"
-    );
-    setMenuClass(menuClicked ? "menu hidden" : "menu visible");
-  };
-
   return (
     <>
-      <section className="hamburgerMenu__container" onClick={updateMenu}>
+      <section
+        className="hamburgerMenu__container"
+        onClick={() =>
+          updateMenu(setMenuClass, setBurgerClass, setMenuClicked, menuClicked)
+        }
+      >
         <div className={burgerclass}></div>
         <div className={burgerclass}></div>
         <div className={burgerclass}></div>

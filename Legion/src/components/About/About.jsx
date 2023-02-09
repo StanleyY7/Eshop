@@ -1,16 +1,13 @@
 import "./About.css";
+import { closeModal } from "../../Services/nav";
 
 const About = ({ setOpened, open }) => {
-  const closeModal = () => {
-    setOpened(false);
-  };
-
   return (
     <>
       {open && (
         <div className="overlay">
           <section className="About__container">
-            <p className="close-button" onClick={closeModal}>
+            <p className="close-button" onClick={closeModal(setOpened)}>
               X
             </p>
 

@@ -3,12 +3,11 @@ import ProductGrid from "../../components/ProductGrid/productGrid";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import SocialSection from "../../components/SocialSection/SocialSection";
-import { useEffect } from "react";
+
+import { startPageAtTop } from "../../Services/general";
 
 const AllProducts = ({ products, setSelectedProduct }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  startPageAtTop();
 
   return (
     <>

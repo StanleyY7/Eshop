@@ -3,12 +3,11 @@ import Header from "../../components/Header/Header";
 import ProductPageCard from "../../components/ProductGrid/ProductPageCard/ProductPageCard";
 import SocialSection from "../../components/SocialSection/SocialSection";
 import "./ProductPage.css";
-import { useEffect } from "react";
+
+import { startPageAtTop } from "../../Services/general";
 
 const ProductPage = ({ selectedProduct }) => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  startPageAtTop();
   return (
     <>
       <div>
