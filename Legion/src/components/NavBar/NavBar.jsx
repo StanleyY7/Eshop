@@ -4,7 +4,7 @@ import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 import { useState } from "react";
 import About from "../ABout/About";
 import Cart from "./Cart/Cart";
-import { openModal, handleClick } from "../../Services/nav";
+
 import { useNavigate } from "react-router";
 const NavBar = () => {
   const [open, setOpened] = useState(false);
@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <>
       <nav className="navbar">
-        <a className="navbar__link" onClick={() => openModal(setOpened)}>
+        <a className="navbar__link" onClick={() => setOpened(true)}>
           About
         </a>
         <NavLink className="navbar__link" to="/Eshop/Kit">
@@ -23,14 +23,13 @@ const NavBar = () => {
         <NavLink
           className="navbar__link"
           to="#social"
-          onClick={() => handleClick(navigate)}
+          onClick={() => navigate.push("#social")}
         >
           Contact
         </NavLink>
-        <About open={open} setOpened={setOpened} />
-        <HamburgerMenu openModal={openModal} />
+        <HamburgerMenu />
       </nav>
-      <About />
+      <About open={open} setOpened={setOpened} />
       <Cart />
     </>
   );

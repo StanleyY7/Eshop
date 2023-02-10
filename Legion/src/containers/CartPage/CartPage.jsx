@@ -14,6 +14,12 @@ const CartPage = () => {
 
   getProductsFromCart(setCartData);
   startPageAtTop();
+  const total = () => {
+    const totalPrice = cartData
+      .map((item) => item.Price * item.Amount)
+      .reduce((a, b) => a + b, 0);
+    return totalPrice;
+  };
 
   return (
     <>
@@ -41,7 +47,8 @@ const CartPage = () => {
                           />
                           <p>{cartProduct.Name}</p>
                           <p>{cartProduct.Size}</p>
-                          <p>${cartProduct.Price}</p>
+                          <p>Price: ${cartProduct.Price}</p>
+                          <p>Amount Ordered: {cartProduct.Amount}</p>
                           <div className="cartProduct_buttons">
                             <button onClick={() => minusCart(cartProduct)}>
                               -
@@ -65,6 +72,9 @@ const CartPage = () => {
             ) : (
               <h2>Your Cart is empty</h2>
             )}
+          </div>
+          <div>
+            <p className="total-price">Total Price: ${total()}</p>
           </div>
         </div>
       </section>

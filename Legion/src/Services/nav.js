@@ -1,10 +1,6 @@
-export const openModal = (setOpened) => {
-  setOpened(true);
-};
+// Navbar functions
 
-export const handleClick = (navigate) => {
-  navigate.push("#social");
-};
+// For Hamburger Menu display, updates display/classes depending on if clicked or not
 
 export const updateMenu = (
   setMenuClass,
@@ -17,8 +13,4 @@ export const updateMenu = (
     menuClicked ? "burger__class unclicked" : "burger__class clicked"
   );
   setMenuClass(menuClicked ? "menu hidden" : "menu visible");
-};
-
-export const closeModal = (setOpened) => {
-  setOpened(false);
 };

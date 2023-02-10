@@ -1,5 +1,9 @@
 import { useEffect } from "react";
 
+// General Functions
+
+// Function to check to see if social section is in view, if it is plays fade in animation
+
 export const observeSocialFadeIn = (socialRef, setIsInView) => {
   useEffect(() => {
     const socialSectionObserver = new IntersectionObserver((entries) => {
@@ -15,11 +19,15 @@ export const observeSocialFadeIn = (socialRef, setIsInView) => {
   }, []);
 };
 
+// Function to auto start page at top on initial page load.
+
 export const startPageAtTop = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 };
+
+// Slideshow for Cover
 
 export const slideShow = (setCurrentImage, currentImage, coverImages) => {
   useEffect(() => {

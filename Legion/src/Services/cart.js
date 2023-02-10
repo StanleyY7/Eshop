@@ -10,7 +10,10 @@ import {
 } from "@firebase/firestore";
 import { db } from "../firebase-config";
 import { useEffect } from "react";
-import { async } from "@firebase/util";
+
+// Functions For Cart Page
+
+// Fetching data from Cart Collection
 
 export const getProductsFromCart = (setCartData) => {
   useEffect(() => {
@@ -24,6 +27,8 @@ export const getProductsFromCart = (setCartData) => {
     getCartProducts();
   }, []);
 };
+
+// Adding/Updating data to Cart Collection
 
 export const addCart = async (selectedProduct, selectedSize) => {
   try {
@@ -55,6 +60,8 @@ export const addCart = async (selectedProduct, selectedSize) => {
   }
 };
 
+// Updating/Removing data from Cart Collection
+
 export const minusCart = async (selectedProduct) => {
   try {
     const docRef = doc(db, "Cart", selectedProduct.ID);
@@ -67,9 +74,9 @@ export const minusCart = async (selectedProduct) => {
       alert(`${selectedProduct.Name} removed from cart!`);
     } else {
       await deleteDoc(docRef);
+      console.log("Product removed from cart, ID: ", selectedProduct.ID);
+      alert(`${selectedProduct.Name} deleted from cart!`);
     }
-    console.log("Product removed from cart, ID: ", selectedProduct.ID);
-    alert(`${selectedProduct.Name} deleted from cart!`);
   } catch (e) {
     console.log("Error: ", e);
   }

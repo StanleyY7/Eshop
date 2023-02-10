@@ -2,6 +2,10 @@ import { useEffect } from "react";
 import { db } from "../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
+// Functions for product components
+
+// Fetching data from products collection
+
 export const fetchProducts = (setProducts) => {
   useEffect(() => {
     const getProducts = async () => {

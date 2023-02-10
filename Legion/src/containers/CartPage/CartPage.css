@@ -20,6 +20,7 @@
 .cartProduct__container {
   display: flex;
   justify-content: center;
+  padding-bottom: 2rem;
 }
 
 .cartProduct__grid {
@@ -40,4 +41,26 @@
   width: 5rem;
   height: 4rem;
   margin-left: 0.25rem;
+}
+
+.total-price {
+  text-align: center;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .CartPage__content-container {
+    width: 89%;
+  }
+  .CartPage__content-container > div {
+    width: 100%;
+  }
+  .CartPage__content-container > div > h1 {
+    text-align: inherit;
+    width: 109.25%;
+  }
+  .CartPage__content-container > div .total-price {
+    text-align: inherit;
+    width: 109.25%;
+  }
 }/*# sourceMappingURL=CartPage.css.map */
