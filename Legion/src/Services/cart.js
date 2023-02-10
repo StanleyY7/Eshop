@@ -38,7 +38,7 @@ export const addCart = async (selectedProduct, selectedSize) => {
     if (docSnapshot.exists()) {
       await updateDoc(docRef, {
         Amount: increment(1),
-        Size: selectedSize,
+        Size: `${selectedSize}`,
       });
       console.log("Another product added to cart, ID:", selectedProduct.ID);
       alert(`${selectedProduct.Name} has been added to the cart!`);
@@ -49,7 +49,7 @@ export const addCart = async (selectedProduct, selectedSize) => {
         Price: selectedProduct.PPU,
         Quantity: selectedProduct.Quantity,
         Image: selectedProduct.Image,
-        Size: selectedSize,
+        Size: [selectedSize],
         Amount: 1,
       });
       console.log("product added to cart, ID:", selectedProduct.ID);
@@ -79,5 +79,18 @@ export const minusCart = async (selectedProduct) => {
     }
   } catch (e) {
     console.log("Error: ", e);
+  }
+};
+
+// Total Price
+
+export const total = (cartData) => {
+  const totalPrice = cartData
+    .map((item) => item.Price * item.Amount)
+    .reduce((a, b) => a + b, 0);
+  if (totalPrice > 0) {
+    return totalPrice;
+  } else {
+    return "0, get shopping!";
   }
 };

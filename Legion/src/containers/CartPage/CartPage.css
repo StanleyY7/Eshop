@@ -48,7 +48,31 @@
   font-size: 2rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 322px) {
+  .CartPage__content-container {
+    width: 88%;
+  }
+  .CartPage__content-container > div {
+    width: 100%;
+  }
+  .CartPage__content-container > div > h1 {
+    text-align: inherit;
+    width: 109.25%;
+  }
+  .CartPage__content-container > div .total-price {
+    text-align: inherit;
+    width: 109.25%;
+  }
+  .minus-button {
+    margin-left: 1.25rem !important;
+    width: 8rem !important;
+  }
+  .plus-button {
+    width: 8rem !important;
+    margin-right: 1.25rem !important;
+  }
+}
+@media screen and (min-width: 322px) and (max-width: 1000px) {
   .CartPage__content-container {
     width: 89%;
   }

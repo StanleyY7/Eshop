@@ -34,7 +34,7 @@
 .close-button {
   position: fixed;
   top: 1%;
-  left: 6%;
+  left: 0%;
   transform: translate(-50%, -50%);
   background-color: none;
   cursor: default;

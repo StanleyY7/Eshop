@@ -5,8 +5,12 @@ import { useState } from "react";
 
 import "./CartPage.css";
 import { startPageAtTop } from "../../Services/general";
-import { getProductsFromCart, addCart } from "../../Services/cart";
-import { minusCart } from "../../Services/cart";
+import {
+  getProductsFromCart,
+  addCart,
+  minusCart,
+  total,
+} from "../../Services/cart";
 
 const CartPage = () => {
   const [cartData, setCartData] = useState([]);
@@ -14,12 +18,6 @@ const CartPage = () => {
 
   getProductsFromCart(setCartData);
   startPageAtTop();
-  const total = () => {
-    const totalPrice = cartData
-      .map((item) => item.Price * item.Amount)
-      .reduce((a, b) => a + b, 0);
-    return totalPrice;
-  };
 
   return (
     <>
@@ -28,7 +26,7 @@ const CartPage = () => {
         <div className="CartPage__text">
           <h1>Checkout</h1>
           <div>
-            {cartData ? (
+            {cartData &&
               cartData.map((cartProduct) => {
                 return (
                   <div
@@ -50,10 +48,14 @@ const CartPage = () => {
                           <p>Price: ${cartProduct.Price}</p>
                           <p>Amount Ordered: {cartProduct.Amount}</p>
                           <div className="cartProduct_buttons">
-                            <button onClick={() => minusCart(cartProduct)}>
+                            <button
+                              className="minus-button"
+                              onClick={() => minusCart(cartProduct)}
+                            >
                               -
                             </button>
                             <button
+                              className="plus-button"
                               onClick={() =>
                                 addCart(cartProduct, cartProduct.Size)
                               }
@@ -68,13 +70,10 @@ const CartPage = () => {
                     )}
                   </div>
                 );
-              })
-            ) : (
-              <h2>Your Cart is empty</h2>
-            )}
+              })}
           </div>
           <div>
-            <p className="total-price">Total Price: ${total()}</p>
+            <p className="total-price">Total Price: ${total(cartData)}</p>
           </div>
         </div>
       </section>
