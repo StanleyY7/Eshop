@@ -1,19 +1,21 @@
-import Footer from "../../components/Footer/Footer";
+import "./ProductPage.css";
+
 import Header from "../../components/Header/Header";
 import ProductPageCard from "../../components/ProductGrid/ProductPageCard/ProductPageCard";
 import SocialSection from "../../components/SocialSection/SocialSection";
-import "./ProductPage.css";
+import Footer from "../../components/Footer/Footer";
 
 import { startPageAtTop } from "../../Services/general";
 
-const ProductPage = ({ selectedProduct }) => {
+const ProductPage = () => {
   startPageAtTop();
+
   return (
     <>
       <div>
         <Header />
         <div className="productPageCard-wrapper">
-          <ProductPageCard selectedProduct={selectedProduct} />
+          <ProductPageCard />
         </div>
       </div>
 

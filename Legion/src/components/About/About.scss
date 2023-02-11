@@ -31,10 +31,10 @@
   background-color: #101820;
 }
 
-.close-button {
+.close-button-about {
   position: fixed;
   top: 1%;
-  left: 0%;
+  left: 1% !important;
   transform: translate(-50%, -50%);
   background-color: none;
   cursor: default;
@@ -68,7 +68,7 @@
     width: 100vw;
     height: 40vh;
   }
-  .close-button {
+  .close-button-about {
     font-size: 5vw;
   }
 
@@ -88,7 +88,7 @@
     width: 80vw;
     height: 52.5vh;
   }
-  .close-button {
+  .close-button-about {
     font-size: 3vw;
   }
 
@@ -108,7 +108,7 @@
     width: 80vw;
     height: 52.5vh;
   }
-  .close-button {
+  .close-button-about {
     font-size: 3vw;
   }
 

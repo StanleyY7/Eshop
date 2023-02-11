@@ -1,10 +1,13 @@
 import "./SocialSection.css";
+
 import instagramLogo from "../../assets/instagram.png";
 import socialPhotoTwo from "../../assets/socialTwo.png";
 import socialPhotoOne from "../../assets/socialOne.png";
 import socialPhotoThree from "../../assets/socialThree.png";
 import socialPhotoFour from "../../assets/socialFour.png";
+
 import { useState, useRef } from "react";
+
 import { observeSocialFadeIn } from "../../Services/general";
 
 const SocialSection = () => {

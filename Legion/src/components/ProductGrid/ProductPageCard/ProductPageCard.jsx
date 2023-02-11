@@ -1,12 +1,19 @@
 import "./ProductPageCard.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import Dropdown from "./Dropdown/Dropdown";
 import { addCart } from "../../../Services/cart";
+import { ProductContext } from "../../ProductProvider/ProductContext/ProductContext";
+import { fetchProducts } from "../../../Services/products";
 
-const ProductPageCard = ({ toggle, selectedProduct }) => {
+const ProductPageCard = ({ toggle }) => {
+  const { selectedProduct, setProducts } = useContext(ProductContext);
+
   const [selectedSize, setSelectedSize] = useState(selectedProduct.Sizes[0]);
-
+  const decrementQuantity = () => {
+    selectedProduct.Quantity--;
+  };
+  fetchProducts(setProducts);
   return (
     <>
       <div className={`wrapper ${toggle}`}>
@@ -25,14 +32,16 @@ const ProductPageCard = ({ toggle, selectedProduct }) => {
 
                 <Dropdown
                   selectedSize={selectedSize}
-                  selectedProduct={selectedProduct}
                   setSelectedSize={setSelectedSize}
                 />
 
                 <p>{selectedProduct.Quantity} in Stock</p>
                 <button
                   className="add-button"
-                  onClick={() => addCart(selectedProduct, selectedSize)}
+                  onClick={() => {
+                    addCart(selectedProduct, selectedSize);
+                    decrementQuantity();
+                  }}
                 >
                   Add to Cart
                 </button>

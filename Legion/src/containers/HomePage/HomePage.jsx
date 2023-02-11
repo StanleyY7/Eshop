@@ -7,21 +7,15 @@ import Footer from "../../components/Footer/Footer";
 
 import { startPageAtTop } from "../../Services/general";
 
-const HomePage = ({ products, setSelectedProduct }) => {
-  startPageAtTop;
+const HomePage = () => {
+  startPageAtTop();
   return (
     <>
       <Header />
       <Cover />
-      <ProductGrid
-        products={products}
-        setSelectedProduct={setSelectedProduct}
-      />
+      <ProductGrid />
       <SocialSection />
-      <TrendingCarousel
-        products={products}
-        setSelectedProduct={setSelectedProduct}
-      />
+      <TrendingCarousel />
       <Footer />
     </>
   );

@@ -1,7 +1,6 @@
+import "./HamburgerMenu.css";
 import { useState } from "react";
 import { updateMenu } from "../../../Services/nav";
-
-import "./HamburgerMenu.css";
 
 const HamburgerMenu = () => {
   const [burgerclass, setBurgerClass] = useState("burger__class unclicked");

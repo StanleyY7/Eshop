@@ -1,9 +1,10 @@
 import "./NavBar.css";
-import { NavLink } from "react-router-dom";
-import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
-import { useState } from "react";
 import About from "../ABout/About";
 import Cart from "./Cart/Cart";
+import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
+
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 import { useNavigate } from "react-router";
 const NavBar = () => {

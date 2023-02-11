@@ -6,47 +6,22 @@ import HomePage from "./containers/HomePage/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductPage from "./containers/ProductPage/ProductPage";
 import CartPage from "./containers/CartPage/CartPage";
-
-import { fetchProducts } from "./Services/products";
-
-import { useState } from "react";
+import ProductProvider from "./components/ProductProvider/ProductProvider";
 
 const App = () => {
-  const [products, setProducts] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-
-  fetchProducts(setProducts);
-
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/Eshop"
-            element={
-              <HomePage
-                products={products}
-                setSelectedProduct={setSelectedProduct}
-              />
-            }
-          />
-          <Route
-            path="/Eshop/Kit"
-            element={
-              <AllProducts
-                products={products}
-                setSelectedProduct={setSelectedProduct}
-              />
-            }
-          />
-          <Route
-            path="/Eshop/Product/:id"
-            element={<ProductPage selectedProduct={selectedProduct} />}
-          />
+      <ProductProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/Eshop" element={<HomePage />} />
+            <Route path="/Eshop/Kit" element={<AllProducts />} />
+            <Route path="/Eshop/Product/:id" element={<ProductPage />} />
 
-          <Route path="/Eshop/Cart" element={<CartPage />} />
-        </Routes>
-      </BrowserRouter>
+            <Route path="/Eshop/Cart" element={<CartPage />} />
+          </Routes>
+        </BrowserRouter>
+      </ProductProvider>
     </>
   );
 };

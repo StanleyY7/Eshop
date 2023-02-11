@@ -1,4 +1,5 @@
 import "./AllProducts.css";
+
 import ProductGrid from "../../components/ProductGrid/productGrid";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
@@ -6,7 +7,7 @@ import SocialSection from "../../components/SocialSection/SocialSection";
 
 import { startPageAtTop } from "../../Services/general";
 
-const AllProducts = ({ products, setSelectedProduct }) => {
+const AllProducts = () => {
   startPageAtTop();
 
   return (
@@ -14,10 +15,7 @@ const AllProducts = ({ products, setSelectedProduct }) => {
       <div className="page__container">
         <Header />
         <div className="start-wrapper">
-          <ProductGrid
-            products={products}
-            setSelectedProduct={setSelectedProduct}
-          />
+          <ProductGrid />
         </div>
       </div>
 

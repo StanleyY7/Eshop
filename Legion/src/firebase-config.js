@@ -5,6 +5,10 @@ import { initializeApp } from "firebase/app";
 
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 
+// Import the functions you need from the SDKs you need
+
+// https://firebase.google.com/docs/web/setup#available-libraries
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDGTQ80izR2u98XpUjIK9iAXQ5XypDjMNs",
