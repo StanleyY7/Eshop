@@ -1,22 +1,26 @@
+import "./CartPage.css";
+
 import Header from "../../components/Header/Header";
 import SocialSection from "../../components/SocialSection/SocialSection";
 import Footer from "../../components/Footer/Footer";
+
 import { useState } from "react";
 
-import "./CartPage.css";
 import { startPageAtTop } from "../../Services/general";
 import {
   getProductsFromCart,
-  addCart,
-  minusCart,
   total,
+  minusCart,
+  addCart,
 } from "../../Services/cart";
 
 const CartPage = () => {
   const [cartData, setCartData] = useState([]);
   const [displayNone, setDisplayNone] = useState(false);
+  const [buttonClicked, setButtonClicked] = useState(false);
+  const [addbuttonClicked, setAddButtonClicked] = useState(false);
 
-  getProductsFromCart(setCartData);
+  getProductsFromCart(setCartData, buttonClicked);
   startPageAtTop();
 
   return (
@@ -44,21 +48,30 @@ const CartPage = () => {
                             src={cartProduct.Image}
                           />
                           <p>{cartProduct.Name}</p>
-                          <p>{cartProduct.Size}</p>
+                          <p>{`${cartProduct.Size} `} </p>
                           <p>Price: ${cartProduct.Price}</p>
                           <p>Amount Ordered: {cartProduct.Amount}</p>
                           <div className="cartProduct_buttons">
                             <button
                               className="minus-button"
-                              onClick={() => minusCart(cartProduct)}
+                              onClick={() => {
+                                minusCart(cartProduct);
+                                setButtonClicked(!buttonClicked);
+                              }}
                             >
                               -
                             </button>
                             <button
                               className="plus-button"
-                              onClick={() =>
-                                addCart(cartProduct, cartProduct.Size)
-                              }
+                              onClick={() => {
+                                setButtonClicked(!buttonClicked);
+                                setAddButtonClicked(true);
+                                addCart(
+                                  cartProduct,
+                                  cartProduct.Size,
+                                  addbuttonClicked
+                                );
+                              }}
                             >
                               +
                             </button>

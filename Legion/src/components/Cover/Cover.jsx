@@ -1,8 +1,11 @@
 import "./Cover.css";
+
 import legionCoverOne from "../../assets/legionCover.png";
 import legionCoverTwo from "../../assets/legionCoverTwo.png";
 import legionCoverThree from "../../assets/legionCoverThree.png";
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
+
 import { slideShow } from "../../Services/general";
 
 const Cover = () => {

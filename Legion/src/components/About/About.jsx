@@ -6,7 +6,7 @@ const About = ({ setOpened, open }) => {
       {open && (
         <div className="overlay">
           <section className="About__container">
-            <p className="close-button" onClick={() => setOpened(false)}>
+            <p className="close-button-about" onClick={() => setOpened(false)}>
               X
             </p>
 

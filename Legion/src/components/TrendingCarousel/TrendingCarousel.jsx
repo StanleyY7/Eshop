@@ -1,10 +1,14 @@
-import { useState } from "react";
 import "./TrendingCarousel.css";
-import ProductCard from "../ProductGrid/ProductCard/ProductCard";
-import { next, previous } from "../../Services/carousel";
 
-const TrendingCarousel = ({ products, setSelectedProduct }) => {
+import { useState, useContext } from "react";
+
+import { next, previous } from "../../Services/carousel";
+import { ProductContext } from "../ProductProvider/ProductContext/ProductContext";
+import FavouritedCard from "../ProductGrid/FavouritedCard/FavouritedCard";
+
+const TrendingCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { products } = useContext(ProductContext);
 
   const favouritedProducts = products.filter(
     (product) => product.Favourited === true
@@ -27,7 +31,7 @@ const TrendingCarousel = ({ products, setSelectedProduct }) => {
           </div>
           <div className="trendingCarousel__content-container">
             {favouritedProducts[currentIndex] && (
-              <ProductCard
+              <FavouritedCard
                 favouritedProducts={[
                   favouritedProducts[currentIndex],
                   favouritedProducts[
@@ -37,7 +41,6 @@ const TrendingCarousel = ({ products, setSelectedProduct }) => {
                     (currentIndex + 2) % favouritedProducts.length
                   ],
                 ]}
-                setSelectedProduct={setSelectedProduct}
               />
             )}
           </div>
