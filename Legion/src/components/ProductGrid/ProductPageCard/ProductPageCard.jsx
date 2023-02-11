@@ -5,15 +5,14 @@ import Dropdown from "./Dropdown/Dropdown";
 import { addCart } from "../../../Services/cart";
 import { ProductContext } from "../../ProductProvider/ProductContext/ProductContext";
 import { fetchProducts } from "../../../Services/products";
+import { decrementQuantity } from "../../../Services/productPageCard";
 
 const ProductPageCard = ({ toggle }) => {
   const { selectedProduct, setProducts } = useContext(ProductContext);
-
   const [selectedSize, setSelectedSize] = useState(selectedProduct.Sizes[0]);
-  const decrementQuantity = () => {
-    selectedProduct.Quantity--;
-  };
+
   fetchProducts(setProducts);
+
   return (
     <>
       <div className={`wrapper ${toggle}`}>
@@ -35,12 +34,19 @@ const ProductPageCard = ({ toggle }) => {
                   setSelectedSize={setSelectedSize}
                 />
 
-                <p>{selectedProduct.Quantity} in Stock</p>
+                <p>
+                  {`${
+                    selectedProduct.Quantity > 0
+                      ? selectedProduct.Quantity
+                      : "0 "
+                  }`}
+                  in Stock
+                </p>
                 <button
                   className="add-button"
                   onClick={() => {
                     addCart(selectedProduct, selectedSize);
-                    decrementQuantity();
+                    decrementQuantity(selectedProduct);
                   }}
                 >
                   Add to Cart

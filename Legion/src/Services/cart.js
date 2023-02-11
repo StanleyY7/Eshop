@@ -45,15 +45,22 @@ export const addCart = async (
     if (selectedProduct.Quantity >= 1) {
       await updateDoc(productRef, {
         Quantity: increment(-1),
+        Amount: increment(1),
       });
 
       if (addButtonClicked) {
-        await updateDoc(docRef, {
-          Amount: increment(1),
-        });
+        if (selectedProduct.Amount < selectedProduct.Quantity) {
+          await updateDoc(docRef, {
+            Amount: increment(1),
+          });
+        } else {
+          alert("No more stock. Please order something else");
+        }
       }
+
       if (docSnapshot.exists()) {
         await updateDoc(docRef, {
+          Amount: increment(1),
           Size: arrayUnion(selectedSize),
         });
 
@@ -67,7 +74,7 @@ export const addCart = async (
           Quantity: selectedProduct.Quantity - 1,
           Image: selectedProduct.Image,
           Size: [selectedSize],
-          Amount: 1,
+          Amount: increment(1),
         });
         console.log("product added to cart, ID:", selectedProduct.ID);
         alert(`${selectedProduct.Name} has been added to the cart!`);
