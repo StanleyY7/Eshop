@@ -45,6 +45,7 @@ export const addCart = async (
       await updateDoc(productRef, {
         Quantity: increment(-1),
       });
+
       if (addButtonClicked) {
         if (selectedProduct.Amount < selectedProduct.Quantity) {
           await updateDoc(docRef, {

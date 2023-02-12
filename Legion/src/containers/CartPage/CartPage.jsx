@@ -18,7 +18,7 @@ const CartPage = () => {
   const [cartData, setCartData] = useState([]);
   const [displayNone, setDisplayNone] = useState(false);
   const [buttonClicked, setButtonClicked] = useState(false);
-  const [addButtonClicked, setaddButtonClicked] = useState(false);
+  const addButtonClicked = true;
 
   getProductsFromCart(setCartData, buttonClicked);
   startPageAtTop();
@@ -65,7 +65,7 @@ const CartPage = () => {
                               className="plus-button"
                               onClick={() => {
                                 setButtonClicked(!buttonClicked);
-                                setaddButtonClicked(true);
+
                                 addCart(
                                   cartProduct,
                                   cartProduct.Size,
