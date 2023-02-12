@@ -41,19 +41,19 @@ export const addCart = async (
     const productRef = doc(db, "products", selectedProduct.ID);
 
     const docSnapshot = await getDoc(docRef);
-
-    if (selectedProduct.Quantity >= 1) {
+    if (selectedProduct.Quantity > 0) {
       await updateDoc(productRef, {
         Quantity: increment(-1),
-        Amount: increment(1),
       });
-
       if (addButtonClicked) {
         if (selectedProduct.Amount < selectedProduct.Quantity) {
           await updateDoc(docRef, {
             Amount: increment(1),
           });
         } else {
+          await updateDoc(productRef, {
+            Quantity: 0,
+          });
           alert("No more stock. Please order something else");
         }
       }

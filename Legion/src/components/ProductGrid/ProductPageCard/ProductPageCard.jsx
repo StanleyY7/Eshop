@@ -37,7 +37,7 @@ const ProductPageCard = ({ toggle }) => {
                 <p>
                   {`${
                     selectedProduct.Quantity > 0
-                      ? selectedProduct.Quantity
+                      ? `${selectedProduct.Quantity} `
                       : "0 "
                   }`}
                   in Stock
