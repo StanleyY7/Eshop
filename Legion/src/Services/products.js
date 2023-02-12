@@ -8,13 +8,16 @@ import { collection, onSnapshot } from "firebase/firestore";
 
 export const fetchProducts = (setProducts) => {
   useEffect(() => {
-    const productsCollection = collection(db, "products");
-    const reRender = onSnapshot(productsCollection, (snapshot) => {
-      const dataList = snapshot.docs.map((doc) => doc.data());
-      setProducts(dataList);
-      console.log(dataList);
-    });
+    const fetchData = async () => {
+      const productsCollection = collection(db, "products");
+      const reRender = onSnapshot(productsCollection, async (snapshot) => {
+        const dataList = snapshot.docs.map((doc) => doc.data());
+        await setProducts(dataList);
+        console.log(dataList);
+      });
 
-    return () => reRender();
+      return () => reRender();
+    };
+    fetchData();
   }, []);
 };

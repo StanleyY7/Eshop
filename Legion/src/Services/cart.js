@@ -19,11 +19,14 @@ import { onSnapshot } from "@firebase/firestore";
 export const getProductsFromCart = (setCartData) => {
   useEffect(() => {
     const cartProductsCollection = collection(db, "Cart");
-    const renderOnChange = onSnapshot(cartProductsCollection, (snapshot) => {
-      const mappedCartData = snapshot.docs.map((doc) => doc.data());
-      setCartData(mappedCartData);
-      console.log(mappedCartData);
-    });
+    const renderOnChange = onSnapshot(
+      cartProductsCollection,
+      async (snapshot) => {
+        const mappedCartData = snapshot.docs.map((doc) => doc.data());
+        await setCartData(mappedCartData);
+        console.log(mappedCartData);
+      }
+    );
 
     return () => renderOnChange();
   }, []);
