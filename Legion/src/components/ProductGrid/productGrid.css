@@ -79,18 +79,20 @@
   .productGrid__container {
     width: 100%;
     height: 60%;
+    padding-bottom: 2.5rem;
   }
   .productGrid {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media screen and (min-width: 1400px) and (max-width: 1610px) {
+@media screen and (min-width: 1400px) and (max-width: 1656px) {
   .productGrid__title {
     margin-left: 2rem;
   }
   .productGrid__container {
     width: 100%;
     height: 60%;
+    padding-bottom: 2.75rem;
   }
   .productGrid {
     grid-template-columns: 1fr 1fr;

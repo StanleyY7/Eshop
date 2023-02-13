@@ -59,8 +59,11 @@ ul {
   list-style-type: none;
   text-align: center;
 }
+ul > li {
+  padding: 1.25rem;
+}
 ul > li > a {
-  font-size: 16vw;
+  font-size: 14vw;
   color: white;
 }
 
@@ -72,8 +75,24 @@ ul > li > a {
   display: block;
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (max-width: 601px) {
+  ul > li {
+    padding: 0rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1400px) {
   .hamburgerMenu__container {
     display: none;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .hamburgerMenu__container {
+    display: none;
+  }
+  ul > li {
+    padding: 2rem;
+  }
+  ul > li > a {
+    font-size: 10vw;
   }
 }/*# sourceMappingURL=HamburgerMenu.css.map */

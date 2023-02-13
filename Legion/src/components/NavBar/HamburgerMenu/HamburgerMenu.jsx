@@ -21,26 +21,28 @@ const HamburgerMenu = () => {
       </section>
 
       <div className={menuClass}>
-        <ul className="links-container">
-          <li>
-            <a href="/Eshop">Home</a>
-          </li>
-          <br />
-          <br />
-          <li>
-            <a
-              href="#social"
-              onClick={() => {
-                setBurgerClass("burger__class unclicked");
-                setMenuClass("menu hidden");
-              }}
-            >
-              Contact
-            </a>
-          </li>
-          <br />
-          <br />
-        </ul>
+        <div className="hamburger__wrapper">
+          <ul className="links-container">
+            <li>
+              <a href="/Eshop">Home</a>
+            </li>
+            <br />
+            <br />
+            <li>
+              <a
+                href="#social"
+                onClick={() => {
+                  setBurgerClass("burger__class unclicked");
+                  setMenuClass("menu hidden");
+                }}
+              >
+                Contact
+              </a>
+            </li>
+            <br />
+            <br />
+          </ul>
+        </div>
       </div>
     </>
   );

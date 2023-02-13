@@ -24,7 +24,8 @@
 }
 
 .cartProduct__grid {
-  border: 5px groove black;
+  border: 4px groove rgba(0, 0, 0, 0.777);
+  border-radius: 0.5rem;
   width: 25%;
   padding: 2rem;
 }
