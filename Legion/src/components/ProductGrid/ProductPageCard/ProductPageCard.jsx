@@ -1,7 +1,5 @@
 import "./ProductPageCard.css";
-import { useState, useContext, useEffect } from "react";
-import { db } from "../../../firebase-config";
-import { collection, doc, onSnapshot, updateDoc } from "firebase/firestore";
+import { useState, useContext } from "react";
 import Dropdown from "./Dropdown/Dropdown";
 import { addCart } from "../../../Services/cart";
 import { ProductContext } from "../../ProductProvider/ProductContext/ProductContext";
@@ -15,7 +13,7 @@ const ProductPageCard = ({ toggle }) => {
   const [selectedSize, setSelectedSize] = useState(selectedProduct.Sizes[0]);
   const [favouriteClicked, setFavouriteClicked] = useState(false);
 
-  favouriteAProduct(selectedProduct, favouriteClicked);
+  favouriteAProduct(selectedProduct, favouriteClicked, setFavouriteClicked);
 
   return (
     <>
