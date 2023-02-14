@@ -4,23 +4,17 @@ import Header from "../../components/Header/Header";
 import SocialSection from "../../components/SocialSection/SocialSection";
 import Footer from "../../components/Footer/Footer";
 
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import { startPageAtTop } from "../../Services/general";
-import {
-  getProductsFromCart,
-  total,
-  minusCart,
-  addCart,
-} from "../../Services/cart";
+import { total, minusCart, addCart } from "../../Services/cart";
+import { ProductContext } from "../../components/ProductProvider/ProductContext/ProductContext";
 
 const CartPage = () => {
-  const [cartData, setCartData] = useState([]);
+  const { cartData, buttonClicked, setButtonClicked, addButtonClicked } =
+    useContext(ProductContext);
   const [displayNone, setDisplayNone] = useState(false);
-  const [buttonClicked, setButtonClicked] = useState(false);
-  const addButtonClicked = true;
 
-  getProductsFromCart(setCartData, buttonClicked);
   startPageAtTop();
 
   return (

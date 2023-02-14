@@ -1,17 +1,21 @@
 import "./ProductPageCard.css";
-import { useState, useContext } from "react";
-
+import { useState, useContext, useEffect } from "react";
+import { db } from "../../../firebase-config";
+import { collection, doc, onSnapshot, updateDoc } from "firebase/firestore";
 import Dropdown from "./Dropdown/Dropdown";
 import { addCart } from "../../../Services/cart";
 import { ProductContext } from "../../ProductProvider/ProductContext/ProductContext";
-import { fetchProducts } from "../../../Services/products";
-import { decrementQuantity } from "../../../Services/productPageCard";
+import {
+  decrementQuantity,
+  favouriteAProduct,
+} from "../../../Services/productPageCard";
 
 const ProductPageCard = ({ toggle }) => {
-  const { selectedProduct, setProducts } = useContext(ProductContext);
+  const { selectedProduct } = useContext(ProductContext);
   const [selectedSize, setSelectedSize] = useState(selectedProduct.Sizes[0]);
+  const [favouriteClicked, setFavouriteClicked] = useState(false);
 
-  fetchProducts(setProducts);
+  favouriteAProduct(selectedProduct, favouriteClicked);
 
   return (
     <>
@@ -42,15 +46,25 @@ const ProductPageCard = ({ toggle }) => {
                   }`}
                   in Stock
                 </p>
-                <button
-                  className="add-button"
-                  onClick={() => {
-                    addCart(selectedProduct, selectedSize);
-                    decrementQuantity(selectedProduct);
-                  }}
-                >
-                  Add to Cart
-                </button>
+                <div className="productPageCard__button-container">
+                  <button
+                    className="add-button"
+                    onClick={() => {
+                      addCart(selectedProduct, selectedSize);
+                      decrementQuantity(selectedProduct);
+                    }}
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    className="favourite-button"
+                    onClick={() => {
+                      setFavouriteClicked(true);
+                    }}
+                  >
+                    ♡
+                  </button>
+                </div>
               </div>
             </div>
           </section>

@@ -130,3 +130,16 @@ export const total = (cartData) => {
     return "0, get shopping!";
   }
 };
+
+// Total Amount
+
+export const totalCart = (cartData) => {
+  const totalAmount = cartData
+    .map((item) => item.Amount)
+    .reduce((a, b) => a + b, 0);
+  if (totalAmount > 0) {
+    return totalAmount;
+  } else {
+    return 0;
+  }
+};
