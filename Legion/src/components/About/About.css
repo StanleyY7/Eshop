@@ -34,7 +34,7 @@
 .close-button-about {
   position: fixed;
   top: 1%;
-  left: 1% !important;
+  left: 1.25%;
   transform: translate(-50%, -50%);
   background-color: none;
   cursor: default;
