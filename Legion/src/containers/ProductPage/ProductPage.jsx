@@ -1,4 +1,4 @@
-import "./ProductPage.css";
+import styles from "./ProductPage.module.scss";
 
 import Header from "../../components/Header/Header";
 import ProductPageCard from "../../components/ProductGrid/ProductPageCard/ProductPageCard";
@@ -14,16 +14,16 @@ const ProductPage = () => {
     <>
       <div>
         <Header />
-        <div className="productPageCard-wrapper">
+        <div className={styles.productPageCardWrapper}>
           <ProductPageCard />
         </div>
       </div>
 
-      <div className="end-container">
-        <div className="end-wrapper">
+      <div className={styles.endContainer}>
+        <div className={styles.endWrapper}>
           <SocialSection />
         </div>
-        <div className="footer-wrapper">
+        <div className={styles.footerWrapper}>
           <Footer />
         </div>
       </div>

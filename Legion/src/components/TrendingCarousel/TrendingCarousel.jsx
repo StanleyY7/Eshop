@@ -1,9 +1,10 @@
-import "./TrendingCarousel.css";
+import styles from "./TrendingCarousel.module.scss";
 
 import { useState, useContext } from "react";
 
-import { next, previous } from "../../Services/carousel";
+import { next, previous } from "../../Services/general";
 import { ProductContext } from "../ProductProvider/ProductContext/ProductContext";
+
 import FavouritedCard from "../ProductGrid/FavouritedCard/FavouritedCard";
 
 const TrendingCarousel = () => {
@@ -16,12 +17,12 @@ const TrendingCarousel = () => {
 
   return (
     <>
-      <div className="trendingCarousel__container">
-        <h2 className="trendingCarousel__heading">Trending Styles</h2>
-        <div className="trendingCarousel__grid">
+      <div className={styles.TrendingCarousel__container}>
+        <h2 className={styles.TrendingCarousel__heading}>Trending Styles</h2>
+        <div className={styles.TrendingCarousel__grid}>
           <div>
             <button
-              className="previous-button"
+              className={styles.previousButton}
               onClick={() =>
                 previous(currentIndex, favouritedProducts, setCurrentIndex)
               }
@@ -29,7 +30,7 @@ const TrendingCarousel = () => {
               ⮜
             </button>
           </div>
-          <div className="trendingCarousel__content-container">
+          <div className={styles.TrendingCarousel__contentContainer}>
             {favouritedProducts[currentIndex] && (
               <FavouritedCard
                 favouritedProducts={[
@@ -46,7 +47,7 @@ const TrendingCarousel = () => {
           </div>
           <div>
             <button
-              className="next-button"
+              className={styles.nextButton}
               onClick={() =>
                 next(currentIndex, favouritedProducts, setCurrentIndex)
               }

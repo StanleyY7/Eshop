@@ -1,4 +1,4 @@
-import "../ProductCard/ProductCard.css";
+import styles from "../ProductCard/ProductCard.module.scss";
 import { NavLink } from "react-router-dom";
 import { useState, useContext } from "react";
 import { ProductContext } from "../../ProductProvider/ProductContext/ProductContext";
@@ -8,31 +8,31 @@ const FavouritedCard = ({ favouritedProducts }) => {
   const [clicked, setClicked] = useState(false);
 
   return (
-    <div className="favourited-wrapper">
+    <div className={styles.favouritedWrapper}>
       {favouritedProducts &&
         favouritedProducts.map((product, index) => {
           return (
             <NavLink
-              className="link"
-              to={`/Eshop/Product/${product.ID}`}
+              className={styles.link}
+              to={`/Eshop/product/${product.ID}`}
               key={index}
             >
               <section
-                className="productCard__favourited-container"
+                className={styles.productCard__favouritedContainer}
                 onClick={() => {
                   setSelectedProduct(product);
                   setClicked(true);
                 }}
               >
-                <div className="productCard__favourited-grid">
-                  <div className="productCard__favourited-image-container">
+                <div className={styles.productCard__favouritedGrid}>
+                  <div className={styles.productCard__favouritedImageContainer}>
                     <img
-                      className="productCard__favourited-image"
+                      className={styles.productCard__favouritedImage}
                       src={product.Image}
                     />
                   </div>
                   <p> {product.Name}</p>
-                  <p className="ppu-text"> ${product.PPU}</p>
+                  <p className={styles.ppuText}> ${product.PPU}</p>
                 </div>
               </section>
             </NavLink>

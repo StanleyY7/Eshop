@@ -41,3 +41,40 @@ export const slideShow = (setCurrentImage, currentImage, coverImages) => {
 export const handleSizeChange = (setSelectedSize) => {
   setSelectedSize(event.target.value);
 };
+
+// Carousel
+
+// Handling user clicking next button, goes to next product in carousel.
+
+export const next = (currentIndex, favouritedProducts, setCurrentIndex) => {
+  setCurrentIndex((currentIndex + 1) % favouritedProducts.length);
+};
+
+// Handling user clicking previous button, goes to previous product in carousel.
+
+export const previous = (currentIndex, favouritedProducts, setCurrentIndex) => {
+  if (currentIndex === 0) {
+    setCurrentIndex((currentIndex + 1) % favouritedProducts.length);
+  } else {
+    setCurrentIndex((currentIndex - 1) % favouritedProducts.length);
+  }
+};
+
+
+// Hamburger
+
+// For Hamburger Menu display, updates display/classes depending on if clicked or not
+import styles from "../components/HamburgerMenu/HamburgerMenu.module.scss";
+
+export const updateMenu = (
+  setMenuClass,
+  setBurgerClass,
+  setMenuClicked,
+  menuClicked
+) => {
+  setMenuClicked(!menuClicked);
+  setBurgerClass(
+    menuClicked ? `${styles.burger__class} ${styles.unclicked}`: `${styles.burger__class} ${styles.clicked}`
+  );
+  setMenuClass(menuClicked ? `${styles.menu}  ${styles.hidden}` : `${styles.menu}  ${styles.visible}`);
+};

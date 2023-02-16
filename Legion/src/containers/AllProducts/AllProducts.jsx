@@ -1,4 +1,4 @@
-import "./AllProducts.css";
+import styles from "./AllProducts.module.scss";
 
 import ProductGrid from "../../components/ProductGrid/productGrid";
 import Footer from "../../components/Footer/Footer";
@@ -12,14 +12,14 @@ const AllProducts = () => {
 
   return (
     <>
-      <div className="page__container">
+      <div className={styles.page__container}>
         <Header />
-        <div className="start-wrapper">
+        <div className={styles.startWrapper}>
           <ProductGrid />
         </div>
       </div>
 
-      <div className="allProducts__end-wrapper">
+      <div className={styles.AllProducts__endWrapper}>
         <SocialSection />
         <Footer />
       </div>

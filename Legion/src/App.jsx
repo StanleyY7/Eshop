@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 
 import AllProducts from "./containers/AllProducts/AllProducts";
 
@@ -15,10 +15,10 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/Eshop" element={<HomePage />} />
-            <Route path="/Eshop/Kit" element={<AllProducts />} />
-            <Route path="/Eshop/Product/:id" element={<ProductPage />} />
+            <Route path="/Eshop/kit" element={<AllProducts />} />
+            <Route path="/Eshop/product/:id" element={<ProductPage />} />
 
-            <Route path="/Eshop/Cart" element={<CartPage />} />
+            <Route path="/Eshop/cart" element={<CartPage />} />
           </Routes>
         </BrowserRouter>
       </ProductProvider>

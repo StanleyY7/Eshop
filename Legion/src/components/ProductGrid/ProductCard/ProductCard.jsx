@@ -1,4 +1,4 @@
-import "./ProductCard.css";
+import styles from "./ProductCard.module.scss";
 import { NavLink } from "react-router-dom";
 import { useState, useContext } from "react";
 import { ProductContext } from "../../ProductProvider/ProductContext/ProductContext";
@@ -13,21 +13,21 @@ const ProductCard = () => {
         products.map((product) => {
           return (
             <NavLink
-              className="link"
-              to={`/Eshop/Product/${product.ID}`}
+              className={styles.link}
+              to={`/Eshop/product/${product.ID}`}
               key={product.ID}
             >
               <section
                 key={product.ID}
-                className="productCard__container"
+                className={styles.productCard__container}
                 onClick={() => {
                   setSelectedProduct(product);
                   setClicked(true);
                 }}
               >
-                <div className="productCard__grid">
-                  <div className="productCard__image-container">
-                    <img className="productCard__image" src={product.Image} />
+                <div className={styles.productCard__grid}>
+                  <div className={styles.productCard__imageContainer}>
+                    <img className={styles.productCard__image} src={product.Image} />
                   </div>
                   <p> {product.Name}</p>
                   <p> ${product.PPU}</p>

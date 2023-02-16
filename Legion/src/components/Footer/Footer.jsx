@@ -1,9 +1,10 @@
-import "./Footer.css";
+import styles from "./Footer.module.scss";
+
 import smallLogo from "../../assets/legionSmallLogo.png";
 
 const Footer = () => {
   return (
-    <section className="footer__container">
+    <section className={styles.footer__container}>
       <footer>
         <img src={smallLogo} />
       </footer>
