@@ -1,13 +1,14 @@
-import "./Header.css";
-import NavBar from "../NavBar/NavBar";
+import styles from "./Header.module.scss";
+
+import NavBar from "../../containers/NavBar/NavBar";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <>
-      <section className="header__container">
+      <section className={styles.header__container}>
         <header>
-          <NavLink className="header__title" to="/Eshop">
+          <NavLink className={styles.header__title} to="/Eshop">
             Legion
           </NavLink>
 

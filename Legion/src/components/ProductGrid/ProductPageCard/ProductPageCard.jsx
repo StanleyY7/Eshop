@@ -1,14 +1,14 @@
-import "./ProductPageCard.css";
+import styles from "./ProductPageCard.module.scss";
 import { useState, useContext } from "react";
-import Dropdown from "./Dropdown/Dropdown";
+import Dropdown from "../../Dropdown/Dropdown";
 import { addCart } from "../../../Services/cart";
 import { ProductContext } from "../../ProductProvider/ProductContext/ProductContext";
 import {
   decrementQuantity,
   favouriteAProduct,
-} from "../../../Services/productPageCard";
+} from "../../../Services/products";
 
-const ProductPageCard = ({ toggle }) => {
+const ProductPageCard = () => {
   const { selectedProduct } = useContext(ProductContext);
   const [selectedSize, setSelectedSize] = useState(selectedProduct.Sizes[0]);
   const [favouriteClicked, setFavouriteClicked] = useState(false);
@@ -17,17 +17,17 @@ const ProductPageCard = ({ toggle }) => {
 
   return (
     <>
-      <div className={`wrapper ${toggle}`}>
+      <div className={`${styles.divWrapper}`}>
         {selectedProduct && (
-          <section className="ProductPageCard__container">
-            <div className={`ProductPageCard__grid`}>
-              <div className="justify-wrapper">
-                <div className="ProductPageCard__image-container">
+          <section className={styles.ProductPageCard__container}>
+            <div className={styles.ProductPageCard__grid}>
+              <div className={styles.justifyWrapper}>
+                <div className={styles.ProductPageCard__imageContainer}>
                   <img src={selectedProduct.Image} />
                 </div>
               </div>
 
-              <div className="ProductPageCard__content-container">
+              <div className={styles.ProductPageCard__contentContainer}>
                 <h2>{selectedProduct.Name}</h2>
                 <p>Price: ${selectedProduct.PPU}</p>
 
@@ -44,9 +44,9 @@ const ProductPageCard = ({ toggle }) => {
                   }`}
                   in Stock
                 </p>
-                <div className="productPageCard__button-container">
+                <div className={styles.productPageCard__buttonContainer}>
                   <button
-                    className="add-button"
+                    className={styles.addButton}
                     onClick={() => {
                       addCart(selectedProduct, selectedSize);
                       decrementQuantity(selectedProduct);
@@ -55,7 +55,7 @@ const ProductPageCard = ({ toggle }) => {
                     Add to Cart
                   </button>
                   <button
-                    className="favourite-button"
+                    className={styles.favouriteButton}
                     onClick={() => {
                       setFavouriteClicked(true);
                     }}

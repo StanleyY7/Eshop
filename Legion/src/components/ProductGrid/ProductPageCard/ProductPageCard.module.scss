@@ -1,0 +1,243 @@
+.ProductPageCard__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  align-items: center;
+}
+
+.divWrapper {
+  margin-top: 1rem;
+  margin-bottom: -15rem;
+}
+
+.ProductPageCard__imageContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 5rem 10rem;
+  width: 75%;
+  > img {
+    width: 100%;
+    padding: 2rem;
+    border: 3px groove rgba(0, 0, 0, 0.777);
+    border-radius: 0.5rem;
+  }
+}
+
+.ProductPageCard__contentContainer {
+  text-align: center;
+  color: black;
+  padding: 4rem;
+  width: 80%;
+
+  min-height: 100vh;
+}
+.productPageCard__buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.favouriteButton {
+  height: 3.25rem;
+  width: 3.25rem;
+  padding: 0.15rem;
+  margin-left: 0.1rem;
+  border-radius: 50%;
+}
+select {
+  margin-left: 0.25rem;
+  outline: none;
+}
+
+@media screen and (max-width: 323px) {
+  .ProductPageCard__grid {
+    grid-template-columns: 1fr;
+    align-items: normal;
+    margin-top: 7vh;
+  }
+
+  .justifyWrapper {
+    width: 100%;
+    margin: auto;
+  }
+
+  .ProductPageCard__imageContainer {
+    width: 60%;
+    margin: auto;
+    padding: 2rem 9rem 2rem 2rem;
+    > img {
+      border: 3px solid black;
+    }
+  }
+
+  .ProductPageCard__contentContainer {
+    width: 55%;
+
+  }
+
+  .addButton {
+    height: 10%;
+    width: 30%;
+    margin: auto;
+  }
+  .favouriteButton {
+    height: 3.25rem;
+    width: 3rem;
+    margin-right: 3rem;
+    margin-left: -3.5rem;
+
+    border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 323px) and (max-width: 510px) {
+  .ProductPageCard__grid {
+    grid-template-columns: 1fr;
+    align-items: normal;
+    margin-top: 7vh;
+  }
+
+  .justifyWrapper {
+    width: 100%;
+
+  }
+
+  .ProductPageCard__imageContainer {
+    width: 65%;
+    margin: auto;
+    padding: 2rem 9rem 2rem 2rem;
+    > img {
+      border: 3px solid black;
+    }
+  }
+  .ProductPageCard__contentContainer {
+
+
+    width: 65%;
+  }
+
+  .addButton {
+    padding: 0.25rem 0.1rem !important;
+    height: 3rem;
+    width: 6rem;
+    margin-top: 0.25rem;
+  }
+  .favouriteButton {
+    border-radius: 50%;
+
+    height: 3.25rem;
+    width: 3rem;
+  }
+}
+
+@media screen and (min-width: 510px) and (max-width: 600px) {
+  .ProductPageCard__grid {
+    grid-template-columns: 1fr;
+    align-items: normal;
+    margin-top: 7vh;
+  }
+
+  .justifyWrapper {
+    width: 100%;
+    margin: auto;
+  }
+
+  .ProductPageCard__imageContainer {
+    width: 60%;
+    margin: auto;
+    padding: 2rem 9rem 2rem 2rem;
+    > img {
+      border: 3px solid black;
+    }
+  }
+  .ProductPageCard__contentContainer {
+
+    margin-left: -0.6rem;
+    width: 75%;
+  }
+  .addButton {
+    padding: 0.25rem 0.1rem !important;
+    height: 10%;
+    width: 25%;
+  }
+  .productPageCard__buttonContainer {
+    display: inline;
+  }
+  .favouriteButton {
+    border-radius: 50%;
+    padding: 2rem;
+    margin-top: -0.25rem;
+    height: 10%;
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1500px) {
+  .ProductPageCard__grid {
+    align-items: center;
+    margin-top: -15vh;
+  }
+
+  .justifyWrapper {
+    width: 100%;
+  }
+
+  .ProductPageCard__contentContainer {
+    width: 25%;
+    position: relative;
+    top: 27%;
+    left: 15%;
+  }
+  .addButton {
+    padding: 0.25rem 0.1rem !important;
+    height: 3.5rem;
+    width: 6rem;
+  }
+
+  .ProductPageCard__contentContainer {
+    min-height: 118vh;
+  }
+
+  .ProductPageCard__imageContainer {
+    width: 60%;
+  }
+  .favouriteButton {
+    border-radius: 50%;
+
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .ProductPageCard__grid {
+    align-items: center;
+    gap: 5rem;
+    margin-top: -2vh;
+  }
+
+  .justifyWrapper {
+    width: 50%;
+    margin: 0rem 5rem;
+  }
+
+  .ProductPageCard__contentContainer {
+    width: 50%;
+    position: relative;
+    top: 30.5%;
+    left: 5%;
+  }
+
+  .addButton {
+    padding: 0.25rem 0.1rem !important;
+    height: 3.5rem;
+    width: 4rem;
+  }
+
+  .ProductPageCard__imageContainer {
+    width: 120%;
+  }
+
+  .ProductPageCard__contentContainer {
+    min-height: 90vh;
+  }
+}

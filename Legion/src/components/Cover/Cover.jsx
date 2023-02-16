@@ -1,4 +1,4 @@
-import "./Cover.css";
+import styles from "./Cover.module.scss";
 
 import legionCoverOne from "../../assets/legionCover.png";
 import legionCoverTwo from "../../assets/legionCoverTwo.png";
@@ -17,7 +17,7 @@ const Cover = () => {
   return (
     <section>
       <div
-        className="override"
+        className={styles.override}
         style={{
           width: `100%`,
           height: `60vh`,

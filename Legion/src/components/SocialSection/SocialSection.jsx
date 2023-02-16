@@ -1,4 +1,4 @@
-import "./SocialSection.css";
+import styles from "./SocialSection.module.scss";
 
 import instagramLogo from "../../assets/instagram.png";
 import socialPhotoTwo from "../../assets/socialTwo.png";
@@ -17,29 +17,29 @@ const SocialSection = () => {
   observeSocialFadeIn(socialRef, setIsInView);
 
   return (
-    <section className="SocialSection__container" id="social" ref={socialRef}>
-      <div className="alignment-wrapper">
-        <div className="SocialSection__grid">
+    <section className={styles.SocialSection__container} id="social" ref={socialRef}>
+      <div className={styles.alignmentWrapper}>
+        <div className={styles.SocialSection__grid}>
           <div
-            className={`SocialSection__photo-container ${
-              isInView ? "fade-in-left" : ""
+            className={`${styles.SocialSection__photoContainer} ${
+              isInView ? `${styles.fadeLeft}` : ""
             }`}
           >
             <img src={socialPhotoTwo} />
             <img src={socialPhotoThree} />
           </div>
 
-          <div className="SocialSection__content">
-            <h2 className="SocialSection__title">Join the Legion.</h2>
+          <div className={styles.SocialSection__content}>
+            <h2 className={styles.SocialSection__title}>Join the Legion.</h2>
             <p>And become a legionnaire by following our socials:</p>
             <a href="https://www.instagram.com/" target="_blank">
-              <img className="instagram" src={instagramLogo} />
+              <img className={styles.instagram} src={instagramLogo} />
             </a>
           </div>
 
           <div
-            className={`SocialSection__photo-container ${
-              isInView ? "fade-in-right" : ""
+            className={`${styles.SocialSection__photoContainer} ${
+              isInView ? `${styles.fadeRight}` : ""
             }`}
           >
             <img src={socialPhotoOne} />

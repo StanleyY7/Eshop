@@ -1,0 +1,409 @@
+.page__container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  height: 87vh;
+  background-color: white;
+}
+
+@media screen and (max-width: 281px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    margin-left: 0.35rem;
+  }
+
+  .AllProducts__endWrapper {
+    min-width: 100%;
+  }
+}
+
+@media screen and (min-width: 281px) and (max-width: 320px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    width: 100%;
+  }
+
+  .AllProducts__endWrapper {
+    min-width: 102.5%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 350px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    width: 112%;
+  }
+
+  .AllProducts__endWrapper {
+    min-width: 112%;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 400px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    width: 128%;
+  }
+
+  .AllProducts__endWrapper {
+    min-width: 128%;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 414px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    margin-left: 4.5rem;
+  }
+
+  .AllProducts__endWrapper {
+    width: 130%;
+  }
+}
+
+@media screen and (min-width: 414px) and (max-width: 430px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    margin-left: 7.5rem;
+  }
+
+  .AllProducts__endWrapper {
+    width: 135%;
+  }
+}
+
+@media screen and (min-width: 430px) and (max-width: 447px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    margin-left: 10rem;
+  }
+
+  .AllProducts__endWrapper {
+    width: 140%;
+  }
+}
+
+@media screen and (min-width: 447px) and (max-width: 463px) {
+  .page__container {
+    height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    margin-left: 9.5rem;
+  }
+
+  .AllProducts__endWrapper {
+    width: 144%;
+  }
+}
+
+@media screen and (min-width: 463px) and (max-width: 507px) {
+  .page__container {
+    height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    margin-left: 10.75rem;
+  }
+
+  .AllProducts__endWrapper {
+    width: 150%;
+  }
+}
+
+@media screen and (min-width: 507px) and (max-width: 516px) {
+  .page__container {
+    height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    margin-left: 12.75rem;
+    width: 50%;
+  }
+
+  .AllProducts__endWrapper {
+    width: 142%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 516px) and (max-width: 545px) {
+  .page__container {
+    height: 100%;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    margin-left: 12.75rem;
+    width: 50%;
+  }
+
+  .AllProducts__endWrapper {
+    width: 150%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 545px) and (max-width: 566px) {
+  .page__container {
+    height: 100%;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    width: 100%;
+    margin-left: 9.5rem;
+  }
+
+  .AllProducts__endWrapper {
+    width: 175%;
+  }
+}
+
+@media screen and (min-width: 566px) and (max-width: 599px) {
+  .page__container {
+    height: 100%;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    width: 100%;
+    margin-left: 9.5rem;
+  }
+
+  .AllProducts__endWrapper {
+    width: 185%;
+  }
+}
+
+@media screen and (min-width: 599px) and (max-width: 601px) {
+  .page__container {
+    height: 100%;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    width: 125vw;
+  }
+
+  .AllProducts__endWrapper {
+    width: 125vw;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 682px) {
+  .page__container {
+    height: 80%;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    position: relative;
+    top: 50%;
+  }
+
+  .AllProducts__endWrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 682px) and (max-width: 690px) {
+  .page__container {
+    height: 80%;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    position: relative;
+    top: 50%;
+  }
+
+  .AllProducts__endWrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 690px) and (max-width: 729px) {
+  .page__container {
+    height: 80%;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    position: relative;
+    top: 50%;
+  }
+
+  .AllProducts__endWrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 729px) and (max-width: 773px) {
+  .page__container {
+    height: 80%;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    position: relative;
+    top: 50%;
+  }
+
+  .AllProducts__endWrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 773px) and (max-width: 800px) {
+  .page__container {
+    height: 80%;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    position: relative;
+    top: 50%;
+  }
+
+  .AllProducts__endWrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  .page__container {
+    height: 80%;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    position: relative;
+    top: 50%;
+  }
+
+  .AllProducts__endWrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+  .page__container {
+    height: 80%;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .startWrapper {
+    position: relative;
+    top: 50%;
+  }
+
+  .AllProducts__endWrapper {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1440px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .AllProducts__endWrapper {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-height: 1200px) {
+  .page__container {
+    height: 80%;
+    margin-top: 10rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1500px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .AllProducts__endWrapper {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1656px) {
+  .page__container {
+    height: 80%;
+    padding-bottom: 1rem;
+  }
+
+  .AllProducts__endWrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (min-height: 1200px) {
+  .page__container {
+    height: 80%;
+    margin-top: 10rem;
+    padding-bottom: 1rem;
+  }
+}
