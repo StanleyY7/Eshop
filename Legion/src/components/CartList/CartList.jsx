@@ -69,7 +69,7 @@ return(
               })}
           </div>
           <div>
-            <p className="total-price">Total Price: ${total(cartData)}</p>
+            <p className={styles.totalPrice}>Total Price: ${total(cartData)}</p>
           </div>
         </div>
       </section>

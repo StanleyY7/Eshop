@@ -130,13 +130,13 @@
     }
   }
   .SocialSection__content {
-    font-size: 1rem !important;
+    font-size: 0.75rem !important;
     padding: 0rem !important;
     padding: 1rem !important;
   }
   .SocialSection__title {
     margin-left: 0.325rem !important;
-    font-size: 1.65rem !important;
+    font-size: 1.25rem !important;
   }
 }
 
@@ -175,3 +175,37 @@
     font-size: 1.25rem !important;
   }
 }
+
+
+
+@media screen and (min-width: 1700px) and (max-width: 2300px)  {
+  .SocialSection__grid {
+    grid-template-columns: 1fr 0.98fr 1fr;
+  }
+
+  .SocialSection__photoContainer {
+    > img {
+      width: 15rem;
+      padding: 0rem 1rem;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 2300px)  {
+  .SocialSection__grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .SocialSection__photoContainer {
+    > img {
+      width: 22rem;
+      padding: 0rem 1rem;
+    }
+  }
+}
+
+
+
+

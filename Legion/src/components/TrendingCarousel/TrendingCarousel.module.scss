@@ -3,12 +3,14 @@
   text-align: center;
   font-size: 1.125rem;
   padding: 0.5rem;
-  height: 40vh;
+  height: 100%;
+  padding-bottom: 4rem;
   width: 100vw;
   background-color: white;
 }
 
 .TrendingCarousel__heading {
+  padding-top: 0.25rem;
   padding-bottom: 0.5rem;
 }
 
@@ -33,7 +35,8 @@
   }
   .TrendingCarousel__container {
     width: 100%;
-    height: 45vh;
+    height: 100%;
+    padding-bottom: 2rem;
   }
 
   .TrendingCarousel__grid {
@@ -69,7 +72,7 @@
   }
   .TrendingCarousel__container {
     width: 96%;
-    height: 45vh;
+    padding-bottom: 2.5rem;
   }
 
   .TrendingCarousel__grid {
@@ -105,7 +108,7 @@
   }
   .TrendingCarousel__container {
     width: 97%;
-    height: 45vh;
+    padding-bottom: 3rem;
   }
 
   .TrendingCarousel__grid {
@@ -134,7 +137,7 @@
   }
   .TrendingCarousel__container {
     width: 97.5%;
-    height: 45vh;
+    padding-bottom: 3rem;
   }
 
   .TrendingCarousel__grid {
@@ -176,7 +179,8 @@
   }
 
   .TrendingCarousel__container {
-    height: 45vh;
+    height: 100%;
+    padding-bottom: 3.5rem;
   }
 }
 
@@ -185,6 +189,7 @@
     width: 90%;
   }
   .TrendingCarousel__container {
-    height: 45vh;
+    height: 100%;
+    padding-bottom: 3.75rem;
   }
 }
