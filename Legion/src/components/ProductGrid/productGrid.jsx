@@ -1,5 +1,5 @@
 import styles from "./productGrid.module.scss";
-import ProductCard from "./ProductCard/ProductCard";
+import ProductCard from "../ProductCard/ProductCard";
 
 const ProductGrid = () => {
   return (

@@ -1,12 +1,12 @@
 import styles from "./ProductPageCard.module.scss";
 import { useState, useContext } from "react";
-import Dropdown from "../../Dropdown/Dropdown";
-import { addCart } from "../../../Services/cart";
-import { ProductContext } from "../../ProductProvider/ProductContext/ProductContext";
+import Dropdown from "../Dropdown/Dropdown";
+import { addCart } from "../../Services/cart";
+import { ProductContext } from "../ProductContext/ProductContext";
 import {
   decrementQuantity,
   favouriteAProduct,
-} from "../../../Services/products";
+} from "../../Services/products";
 
 const ProductPageCard = () => {
   const { selectedProduct } = useContext(ProductContext);

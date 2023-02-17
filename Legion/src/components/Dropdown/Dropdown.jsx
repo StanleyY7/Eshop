@@ -1,6 +1,6 @@
 import { handleSizeChange } from "../../Services/general";
 import { useContext } from "react";
-import { ProductContext } from "../ProductProvider/ProductContext/ProductContext";
+import { ProductContext } from "../ProductContext/ProductContext";
 
 const Dropdown = ({ selectedSize, setSelectedSize }) => {
   const { selectedProduct } = useContext(ProductContext);

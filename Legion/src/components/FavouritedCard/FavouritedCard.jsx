@@ -1,14 +1,14 @@
-import styles from "../ProductCard/ProductCard.module.scss";
+import styles from "./FavouritedCard.module.scss";
 import { NavLink } from "react-router-dom";
 import { useState, useContext } from "react";
-import { ProductContext } from "../../ProductProvider/ProductContext/ProductContext";
+import {ProductContext} from "../ProductContext/ProductContext";
 
 const FavouritedCard = ({ favouritedProducts }) => {
   const { products, setSelectedProduct } = useContext(ProductContext);
   const [clicked, setClicked] = useState(false);
 
   return (
-    <div className={styles.favouritedWrapper}>
+    <div className={styles.FavouritedCard__wrapper}>
       {favouritedProducts &&
         favouritedProducts.map((product, index) => {
           return (
@@ -18,16 +18,16 @@ const FavouritedCard = ({ favouritedProducts }) => {
               key={index}
             >
               <section
-                className={styles.productCard__favouritedContainer}
+                className={styles.FavouritedCard__container}
                 onClick={() => {
                   setSelectedProduct(product);
                   setClicked(true);
                 }}
               >
-                <div className={styles.productCard__favouritedGrid}>
-                  <div className={styles.productCard__favouritedImageContainer}>
+                <div className={styles.FavouritedCard__grid}>
+                  <div className={styles.FavouritedCard__imageContainer}>
                     <img
-                      className={styles.productCard__favouritedImage}
+                      className={styles.FavouritedCard__image}
                       src={product.Image}
                     />
                   </div>

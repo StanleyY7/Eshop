@@ -1,7 +1,7 @@
 import styles from "./ProductCard.module.scss";
 import { NavLink } from "react-router-dom";
 import { useState, useContext } from "react";
-import { ProductContext } from "../../ProductProvider/ProductContext/ProductContext";
+import { ProductContext } from "../ProductContext/ProductContext";
 
 const ProductCard = () => {
   const { products, setSelectedProduct } = useContext(ProductContext);

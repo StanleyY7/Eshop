@@ -2,7 +2,7 @@ import styles from "./Cart.module.scss";
 import CartImage from "../../assets/cart.png";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
-import { ProductContext } from "../../components/ProductProvider/ProductContext/ProductContext";
+import { ProductContext } from "../ProductContext/ProductContext";
 import { totalCart } from "../../Services/cart";
 const Cart = () => {
   const { cartData } = useContext(ProductContext);

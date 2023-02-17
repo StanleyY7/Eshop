@@ -7,13 +7,13 @@ const About = ({ setOpened, open }) => {
         <div className={styles.overlay}>
           <section className={styles.About__container}>
             <p
-              className={styles.About__close - button}
+              className={styles.About__closeButton}
               onClick={() => setOpened(false)}
             >
               X
             </p>
 
-            <div className={styles.About__content - container}>
+            <div className={styles.About__contentContainer}>
               <h1 className={styles.About__title}>About</h1>
               <p>
                 An e-commerce website built by Stanley, this website has it's

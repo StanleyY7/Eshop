@@ -3,9 +3,9 @@ import styles from "./TrendingCarousel.module.scss";
 import { useState, useContext } from "react";
 
 import { next, previous } from "../../Services/general";
-import { ProductContext } from "../ProductProvider/ProductContext/ProductContext";
+import { ProductContext } from "../ProductContext/ProductContext";
 
-import FavouritedCard from "../ProductGrid/FavouritedCard/FavouritedCard";
+import FavouritedCard from "../FavouritedCard/FavouritedCard";
 
 const TrendingCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

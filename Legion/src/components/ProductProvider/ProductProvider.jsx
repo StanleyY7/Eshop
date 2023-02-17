@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { fetchProducts } from "../../Services/products";
 import { getProductsFromCart } from "../../Services/cart";
-import { ProductContext } from "./ProductContext/ProductContext";
+import { ProductContext } from "../ProductContext/ProductContext";
 
 const ProductProvider = (props) => {
   const [products, setProducts] = useState([]);

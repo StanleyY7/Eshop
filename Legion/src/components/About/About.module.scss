@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-.About__content-container {
+.About__contentContainer {
   margin-top: 4rem;
   > p {
     margin-top: -1rem;
@@ -31,7 +31,7 @@
   background-color: #101820;
 }
 
-.close-button-about {
+.About__closeButton{
   position: fixed;
   top: 1%;
   left: 1.25%;
@@ -68,7 +68,7 @@
     width: 100vw;
     height: 40vh;
   }
-  .close-button-about {
+  .About__closeButton{
     font-size: 5vw;
   }
 
@@ -76,7 +76,7 @@
     font-size: 5vw;
   }
 
-  .About__content-container {
+  .About__contentContainer {
     > p {
       font-size: 4vw;
     }
@@ -88,7 +88,7 @@
     width: 80vw;
     height: 52.5vh;
   }
-  .close-button-about {
+  .About__closeButton{
     font-size: 3vw;
   }
 
@@ -96,7 +96,7 @@
     font-size: 5.75vw;
   }
 
-  .About__content-container {
+  .About__contentContainer {
     > p {
       font-size: 4vw;
     }
@@ -108,7 +108,7 @@
     width: 80vw;
     height: 52.5vh;
   }
-  .close-button-about {
+  .About__closeButton{
     font-size: 3vw;
   }
 
@@ -116,7 +116,7 @@
     font-size: 4vw;
   }
 
-  .About__content-container {
+  .About__contentContainer {
     > p {
       font-size: 3vw;
     }

@@ -1,6 +1,6 @@
 import styles from "./CartList.module.scss";
 import { useContext, useState } from "react";
-import { ProductContext } from "../ProductProvider/ProductContext/ProductContext";
+import { ProductContext } from "../ProductContext/ProductContext";
 import { total, minusCart, addCart } from "../../Services/cart";
 
 const CartList = () => {

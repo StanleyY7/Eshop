@@ -1,7 +1,7 @@
 import styles from "./ProductPage.module.scss";
 
 import Header from "../../components/Header/Header";
-import ProductPageCard from "../../components/ProductGrid/ProductPageCard/ProductPageCard";
+import ProductPageCard from "../../components/ProductPageCard/ProductPageCard";
 import SocialSection from "../../components/SocialSection/SocialSection";
 import Footer from "../../components/Footer/Footer";
 
