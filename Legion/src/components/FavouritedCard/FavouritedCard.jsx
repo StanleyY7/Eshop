@@ -1,11 +1,12 @@
 import styles from "./FavouritedCard.module.scss";
 import { NavLink } from "react-router-dom";
-import { useState, useContext } from "react";
+import { useState, useContext} from "react";
 import {ProductContext} from "../ProductContext/ProductContext";
 
 const FavouritedCard = ({ favouritedProducts }) => {
   const { products, setSelectedProduct } = useContext(ProductContext);
   const [clicked, setClicked] = useState(false);
+
 
   return (
     <div className={styles.FavouritedCard__wrapper}>

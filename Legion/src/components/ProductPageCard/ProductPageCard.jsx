@@ -1,5 +1,5 @@
 import styles from "./ProductPageCard.module.scss";
-import { useState, useContext } from "react";
+import { useState, useContext, useRef } from "react";
 import Dropdown from "../Dropdown/Dropdown";
 import { addCart } from "../../Services/cart";
 import { ProductContext } from "../ProductContext/ProductContext";
@@ -12,8 +12,9 @@ const ProductPageCard = () => {
   const { selectedProduct } = useContext(ProductContext);
   const [selectedSize, setSelectedSize] = useState(selectedProduct.Sizes[0]);
   const [favouriteClicked, setFavouriteClicked] = useState(false);
+  const favouriteRef = useRef();
 
-  favouriteAProduct(selectedProduct, favouriteClicked, setFavouriteClicked);
+  favouriteAProduct(selectedProduct, favouriteClicked, setFavouriteClicked, favouriteRef);
 
   return (
     <>
@@ -59,6 +60,7 @@ const ProductPageCard = () => {
                     onClick={() => {
                       setFavouriteClicked(true);
                     }}
+                    ref={favouriteRef}
                   >
                     ♡
                   </button>

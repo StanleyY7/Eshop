@@ -32,7 +32,8 @@ export const decrementQuantity = (selectedProduct) => {
 export const favouriteAProduct = (
   selectedProduct,
   favouriteClicked,
-  setFavouriteClicked
+  setFavouriteClicked,
+  favouriteRef
 ) => {
   useEffect(() => {
     const collectionRef = collection(db, "products");
@@ -45,7 +46,13 @@ export const favouriteAProduct = (
         if (favouriteClicked) {
           updateDoc(docRef, { Favourited: !data.Favourited })
             .then(() => {
-              alert(data.Favourited ? "No Longer Favourited!" : "Favourited!");
+              if(data.Favourited){
+                alert("No Longer Favourited!");
+                favouriteRef.current.style.color="white";
+              } else {
+                favouriteRef.current.style.color="red";
+                alert("Favourited!")
+              }
             })
             .catch((error) => {
               console.error("Error updating document: ", error);
