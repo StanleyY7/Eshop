@@ -2,7 +2,7 @@
 
 Link https://stanleyy7.github.io/Eshop/
 
-![legionDisplay](https://user-images.githubusercontent.com/119549394/218398081-89265166-b2b6-407d-9f43-e7e5b2cc4f24.png)
+![legionLatest](https://user-images.githubusercontent.com/119549394/219933057-ce25b8a2-764e-4bda-af9b-4050a6eb3f3f.png)
 
 ## Outline
 The main aim of this project was to utilise our existing knowledge of HTML, CSS/SCSS, React and Javascript to create a responsive e-commerce website. 
