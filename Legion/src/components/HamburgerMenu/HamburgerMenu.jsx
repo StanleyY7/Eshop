@@ -3,7 +3,9 @@ import { useState } from "react";
 import { updateMenu } from "../../Services/general";
 
 const HamburgerMenu = () => {
-  const [burgerclass, setBurgerClass] = useState(`${styles.burger__class} ${styles.unclicked}`);
+  const [burgerclass, setBurgerClass] = useState(
+    `${styles.burger__class} ${styles.unclicked}`
+  );
   const [menuClass, setMenuClass] = useState(`${styles.menu} ${styles.hidden}`);
   const [menuClicked, setMenuClicked] = useState(false);
 
