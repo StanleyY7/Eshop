@@ -3,10 +3,7 @@ import { useState, useContext, useRef } from "react";
 import Dropdown from "../Dropdown/Dropdown";
 import { addCart } from "../../Services/cart";
 import { ProductContext } from "../ProductContext/ProductContext";
-import {
-  decrementQuantity,
-  favouriteAProduct,
-} from "../../Services/products";
+import { decrementQuantity, favouriteAProduct } from "../../Services/products";
 
 const ProductPageCard = () => {
   const { selectedProduct } = useContext(ProductContext);
@@ -14,7 +11,12 @@ const ProductPageCard = () => {
   const [favouriteClicked, setFavouriteClicked] = useState(false);
   const favouriteRef = useRef();
 
-  favouriteAProduct(selectedProduct, favouriteClicked, setFavouriteClicked, favouriteRef);
+  favouriteAProduct(
+    selectedProduct,
+    favouriteClicked,
+    setFavouriteClicked,
+    favouriteRef
+  );
 
   return (
     <>
