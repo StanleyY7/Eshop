@@ -1,95 +1,121 @@
 .CartPage__contentContainer {
-    min-height: 100vh;
-    color: black;
-    text-align: center;
-    padding-top: 2.5rem;
-    width: 100vw;
-    .CartPage__text {
-      padding-top: 4rem;
-    }
+  min-height: 100vh;
+  color: black;
+  text-align: center;
+  padding-top: 2.5rem;
+  width: 100vw;
+  .CartPage__text {
+    padding-top: 4rem;
   }
-  .show {
-    display: block;
+}
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.cartProduct__container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.cartProduct__grid {
+  border: 4px groove rgba(0, 0, 0, 0.777);
+  border-radius: 0.5rem;
+  width: 25%;
+  padding: 2rem;
+}
+
+.cartProduct__image {
+  width: 50%;
+}
+
+.cartProduct_buttons {
+  display: flex;
+
+  justify-content: center;
+  > button {
+    width: 5rem;
+    height: 4rem;
+    margin-left: 0.25rem;
   }
-  
-  .hide {
-    display: none;
-  }
-  
-  .cartProduct__container {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2rem;
-  }
-  
-  .cartProduct__grid {
-    border: 4px groove rgba(0, 0, 0, 0.777);
-    border-radius: 0.5rem;
-    width: 25%;
-    padding: 2rem;
-  }
-  
-  .cartProduct__image {
-    width: 50%;
-  }
-  
-  .cartProduct_buttons {
-    display: flex;
-  
-    justify-content: center;
-    > button {
-      width: 5rem;
-      height: 4rem;
-      margin-left: 0.25rem;
-    }
-  }
-  
-  .totalPrice {
-    text-align: center;
-    font-size: 2rem;
-  }
-  
-  @media screen and (max-width: 322px) {
-    .CartPage__contentContainer {
-      width: 88%;
-      > div {
-        width: 100%;
-        > h1 {
-          text-align: inherit;
-          width: 109.25%;
-        }
-        .totalPrice {
-          text-align: inherit;
-          width: 109.25%;
-        }
+}
+
+.totalPrice {
+  text-align: center;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 281px) {
+  .CartPage__contentContainer {
+    width: 79%;
+    > div {
+      width: 100%;
+      > h1 {
+        text-align: inherit;
+        width: 109.25%;
       }
-    }
-  
-    .minusButton {
-      margin-left: 1.25rem !important;
-  
-      width: 8rem !important;
-    }
-    .plusButton {
-      width: 8rem !important;
-      margin-right: 1.25rem !important;
-    }
-  }
-  
-  @media screen and (min-width: 322px) and (max-width: 1000px) {
-    .CartPage__contentContainer {
-      width: 89%;
-      > div {
-        width: 100%;
-        > h1 {
-          text-align: inherit;
-          width: 109.25%;
-        }
-        .totalPrice {
-          text-align: inherit;
-          width: 109.25%;
-        }
+      .totalPrice {
+        text-align: inherit;
+        width: 109.25%;
       }
     }
   }
-  
+
+  .minusButton {
+    margin-left: 1.25rem !important;
+
+    width: 8rem !important;
+  }
+  .plusButton {
+    width: 8rem !important;
+    margin-right: 1.25rem !important;
+  }
+}
+
+@media screen and (min-width: 281px) and (max-width: 322px) {
+  .CartPage__contentContainer {
+    width: 88%;
+    > div {
+      width: 100%;
+      > h1 {
+        text-align: inherit;
+        width: 109.25%;
+      }
+      .totalPrice {
+        text-align: inherit;
+        width: 109.25%;
+      }
+    }
+  }
+
+  .minusButton {
+    margin-left: 1.25rem !important;
+
+    width: 8rem !important;
+  }
+  .plusButton {
+    width: 8rem !important;
+    margin-right: 1.25rem !important;
+  }
+}
+
+@media screen and (min-width: 322px) and (max-width: 1000px) {
+  .CartPage__contentContainer {
+    width: 89%;
+    > div {
+      width: 100%;
+      > h1 {
+        text-align: inherit;
+        width: 109.25%;
+      }
+      .totalPrice {
+        text-align: inherit;
+        width: 109.25%;
+      }
+    }
+  }
+}
