@@ -4,6 +4,8 @@ Link https://stanleyy7.github.io/Eshop/
 
 ![legionLatest](https://user-images.githubusercontent.com/119549394/219933057-ce25b8a2-764e-4bda-af9b-4050a6eb3f3f.png)
 
+<img width="250" src="https://github.com/StanleyY7/Eshop/actions/workflows/main.yml/badge.svg"/>
+
 ## Outline
 The main aim of this project was to utilise our existing knowledge of HTML, CSS/SCSS, React and Javascript to create a responsive e-commerce website. 
 
@@ -33,6 +35,10 @@ The main requirements for this project were:
         -   image url
         -   favourited or not (boolean)
 -    To clarify, all data is to be stored in Firestore and fetched by the frontend, there is to be no static product data in the react application.
+
+### Bonus Features
+
+- Added Jest e2e Tests
 
 ## Summary
 
