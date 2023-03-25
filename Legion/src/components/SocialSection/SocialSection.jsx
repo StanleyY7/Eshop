@@ -1,5 +1,5 @@
 import styles from "./SocialSection.module.scss";
-
+import React from "react";
 import instagramLogo from "../../assets/instagram.png";
 import socialPhotoTwo from "../../assets/socialTwo.png";
 import socialPhotoOne from "../../assets/socialOne.png";
@@ -17,7 +17,11 @@ const SocialSection = () => {
   observeSocialFadeIn(socialRef, setIsInView);
 
   return (
-    <section className={styles.SocialSection__container} id="social" ref={socialRef}>
+    <section
+      className={styles.SocialSection__container}
+      id="social"
+      ref={socialRef}
+    >
       <div className={styles.alignmentWrapper}>
         <div className={styles.SocialSection__grid}>
           <div

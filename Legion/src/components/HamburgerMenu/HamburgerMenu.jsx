@@ -1,4 +1,6 @@
 import styles from "./HamburgerMenu.module.scss";
+import React from "react";
+
 import { useState } from "react";
 import { updateMenu } from "../../Services/general";
 

@@ -1,5 +1,5 @@
 import styles from "./Cover.module.scss";
-
+import React from "react";
 import legionCoverOne from "../../assets/legionCover.png";
 import legionCoverTwo from "../../assets/legionCoverTwo.png";
 import legionCoverThree from "../../assets/legionCoverThree.png";
@@ -18,6 +18,7 @@ const Cover = () => {
     <section>
       <div
         className={styles.override}
+        role="slideshow"
         style={{
           width: `100%`,
           height: `60vh`,
