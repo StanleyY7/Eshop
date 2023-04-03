@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 35%;
-  height: 21vw;
+  height: 22.5rem;
   background-color: white;
   border-radius: 1rem;
   z-index: 250;
@@ -65,10 +65,30 @@
   display: block;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 223px) {
+  .About__container {
+    display: none;
+  }
+  .About__closeButton {
+    font-size: 5vw;
+    margin-left: 0.25rem;
+  }
+
+  .About__title {
+    font-size: 5vw;
+  }
+
+  .About__contentContainer {
+    > p {
+      font-size: 4vw;
+    }
+  }
+}
+
+@media screen and (min-width: 223px) and (max-width: 400px) {
   .About__container {
     width: 100vw;
-    height: 30vh;
+    height: 18rem;
   }
   .About__closeButton {
     font-size: 5vw;
@@ -89,7 +109,7 @@
 @media screen and (min-width: 400px) and (max-width: 800px) {
   .About__container {
     width: 80vw;
-    height: 32vh;
+    height: 25rem;
   }
   .About__closeButton {
     font-size: 4.25vw;
@@ -110,7 +130,7 @@
 @media screen and (min-width: 800px) and (max-width: 1000px) {
   .About__container {
     width: 80vw;
-    height: 30vh;
+    height: 25rem;
   }
   .About__closeButton {
     font-size: 3vw;
