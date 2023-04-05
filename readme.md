@@ -38,7 +38,8 @@ The main requirements for this project were:
 
 ### Bonus Features
 
-- Added Jest e2e Tests
+- Added Jest Component Tests
+- Added Cypress Component Tests
 
 ## Summary
 
