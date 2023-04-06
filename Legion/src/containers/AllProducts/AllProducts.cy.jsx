@@ -1,9 +1,19 @@
-import React from 'react'
-import AllProducts from './AllProducts'
+import React from "react";
+import AllProducts from "./AllProducts";
 
-describe('<AllProducts />', () => {
-  it('renders', () => {
+const mountAllProducts = () => {
+  cy.mount(<AllProducts />);
+};
+
+describe("<AllProducts />", () => {
+  it("renders", () => {
     // see: https://on.cypress.io/mounting-react
-    cy.mount(<AllProducts />)
-  })
-})
+    mountAllProducts();
+  });
+
+  it("should render with relevant content", () => {
+    mountAllProducts();
+    cy.get('[role="container"]').should("exist");
+    cy.get('[role="socialContainer"]').should("exist");
+  });
+});

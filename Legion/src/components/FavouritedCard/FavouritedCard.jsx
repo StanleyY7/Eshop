@@ -1,15 +1,14 @@
 import styles from "./FavouritedCard.module.scss";
 import { NavLink } from "react-router-dom";
-import { useState, useContext} from "react";
-import {ProductContext} from "../ProductContext/ProductContext";
+import { useState, useContext } from "react";
+import { ProductContext } from "../ProductContext/ProductContext";
 
 const FavouritedCard = ({ favouritedProducts }) => {
-  const { products, setSelectedProduct } = useContext(ProductContext);
-  const [clicked, setClicked] = useState(false);
-
+  const { setSelectedProduct } = useContext(ProductContext);
+  const [setClicked] = useState(false);
 
   return (
-    <div className={styles.FavouritedCard__wrapper}>
+    <div className={styles.FavouritedCard__wrapper} role="wrapper">
       {favouritedProducts &&
         favouritedProducts.map((product, index) => {
           return (

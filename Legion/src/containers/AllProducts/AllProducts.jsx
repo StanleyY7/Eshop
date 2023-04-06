@@ -10,13 +10,13 @@ const AllProducts = () => {
 
   return (
     <>
-      <div className={styles.page__container}>
+      <div className={styles.page__container} role="container">
         <div className={styles.startWrapper}>
           <ProductGrid />
         </div>
       </div>
 
-      <div className={styles.AllProducts__endWrapper}>
+      <div className={styles.AllProducts__endWrapper} role="socialContainer">
         <SocialSection />
       </div>
     </>

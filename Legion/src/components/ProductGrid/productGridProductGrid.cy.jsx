@@ -1,9 +1,17 @@
-import React from 'react'
-import ProductGrid from './productGrid'
+import React from "react";
+import ProductGrid from "./productGrid";
 
-describe('<ProductGrid />', () => {
-  it('renders', () => {
+const mountProductGrid = () => {
+  cy.mount(<ProductGrid />);
+};
+
+describe("<ProductGrid />", () => {
+  it("renders", () => {
     // see: https://on.cypress.io/mounting-react
-    cy.mount(<ProductGrid />)
-  })
-})
+    mountProductGrid();
+  });
+  it("should render with relevant content", () => {
+    mountProductGrid();
+    cy.contains("All Products").should("exist");
+  });
+});

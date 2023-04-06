@@ -1,9 +1,18 @@
-import React from 'react'
-import TrendingCarousel from './TrendingCarousel'
+import React from "react";
+import TrendingCarousel from "./TrendingCarousel";
 
-describe('<TrendingCarousel />', () => {
-  it('renders', () => {
+const mountTendingCarousel = () => {
+  cy.mount(<TrendingCarousel />);
+};
+
+describe("<TrendingCarousel />", () => {
+  it("renders", () => {
     // see: https://on.cypress.io/mounting-react
-    cy.mount(<TrendingCarousel />)
-  })
-})
+    mountTendingCarousel();
+  });
+  it("should render with relevant content", () => {
+    mountTendingCarousel();
+    cy.contains("Trending Styles").should("exist");
+    cy.get("button").should("have.length", 2);
+  });
+});

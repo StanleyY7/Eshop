@@ -1,9 +1,19 @@
-import React from 'react'
-import Dropdown from './Dropdown'
+import React from "react";
+import Dropdown from "./Dropdown";
 
-describe('<Dropdown />', () => {
-  it('renders', () => {
+const mountDropdown = () => {
+  cy.mount(<Dropdown />);
+};
+
+describe("<Dropdown />", () => {
+  it("renders", () => {
     // see: https://on.cypress.io/mounting-react
-    cy.mount(<Dropdown />)
-  })
-})
+    mountDropdown();
+  });
+
+  it("should render with relevant content", () => {
+    // see: https://on.cypress.io/mounting-react
+    mountDropdown();
+    cy.contains("Size:").should("exist");
+  });
+});

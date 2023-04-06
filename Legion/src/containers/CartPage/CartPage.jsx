@@ -9,7 +9,7 @@ const CartPage = () => {
   return (
     <>
       <CartList />
-      <div className={styles.endCartWrapper}>
+      <div className={styles.endCartWrapper} role="socialWrapper">
         <SocialSection />
       </div>
     </>

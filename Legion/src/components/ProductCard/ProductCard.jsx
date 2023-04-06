@@ -6,7 +6,7 @@ import { ProductContext } from "../ProductContext/ProductContext";
 
 const ProductCard = () => {
   const { products, setSelectedProduct } = useContext(ProductContext);
-  const [clicked, setClicked] = useState(false);
+  const [setClicked] = useState(false);
 
   return (
     <>
